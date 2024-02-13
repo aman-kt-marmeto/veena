@@ -170,13 +170,8 @@
 .banner__heading a {
     text-decoration: none;
     transition: all .4s linear;
-    overflow: hidden;
 }
 
-.banner__heading a {
-    display: inline-block;
-    position: relative;
-}
 
 .banner__heading a:hover {
     color: #d03c3f;
