@@ -1,0 +1,286 @@
+{{ 'slideshow-hero-banner.css' | asset_url | stylesheet_tag }}
+
+<style>
+  @media (min-width: 750px) {
+     .padding-{{ section.id }} {
+       padding-top: {{ section.settings.padding_top }}px;
+       padding-bottom: {{ section.settings.padding_bottom }}px;
+     }
+   }
+
+  .padding-{{ section.id }} {
+     padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+     padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+   }
+</style>
+
+<div class="slideshow-hero padding-{{section.id}}">
+  <div class="page-width">
+    <Custom-Splide>
+      <div class="splide splide-inner">
+        <div div class="splide__track">
+          <ul class="splide__list">
+            {% for block in section.blocks %}
+              <li class="splide__slide">
+                <div class="image-text-block">
+                  <div class="slideshow__image">
+                    {% render 'responsive-picture',
+                      desktopImage: block.settings.desktop_image,
+                      mobileImage: block.settings.mobile_image
+                    %}
+                  </div>
+                  <div class="slideshow-hero__text-content {{block.settings.banner_text_position}}">
+                    <div class="banner-inner-content {{block.settings.text_align}}">
+                      <div class="slideshow__caption">
+                        <ul>
+                          <li>{{ block.settings.banner_caption }}</li>
+                        </ul>
+                      </div>
+                      <h2 class="banner__heading inline-richtext h1 slideshow__heading--color">
+                        {{ block.settings.banner_heading_left }}
+                        <a href="{{block.settings.heading_text_url}}" title="All collections">
+                          {{- block.settings.animated_linked_text -}}
+                        </a>
+                        {{ block.settings.banner_heading_right }}
+                      </h2>
+                      <div class="button--secondary ">
+                        <a href="{{block.settings.button_url}}" target="_blank" class="button">
+                          <span>Explore more</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <script id="splideProperties">
+        {
+          "autoplay": {{ section.settings.auto_play }},
+          "arrows": {{ section.settings.arrow }},
+          "pagination": {{section.settings.pagination}},
+          "perPage": 1,
+          "width":"100%",
+          "speed":{{ section.settings.speed }},
+          "type":"loop"
+        }
+      </script>
+    </Custom-Splide>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Slideshow Hero Banner",
+  "tag": "section",
+  "class": "slideshow-hero-banner",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "default": 24,
+      "unit": "px",
+      "step": 1
+    },
+    {
+      "type": "range",
+      "label": "padding bottom",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "label": "Auto Play",
+      "id": "auto_play",
+      "default": "true",
+      "options": [
+        {
+          "label": "True",
+          "value": "true"
+        },
+        {
+          "label": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Arrow",
+      "id": "arrow",
+      "default": "true",
+      "options": [
+        {
+          "label": "True",
+          "value": "true"
+        },
+        {
+          "label": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Pagination",
+      "id": "pagination",
+      "default": "true",
+      "options": [
+        {
+          "label": "True",
+          "value": "true"
+        },
+        {
+          "label": "False",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "label": "Speed",
+      "id": "speed",
+      "default": 500,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "unit": "ms"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slides",
+      "name": "Slides",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Desktop Image",
+          "id": "desktop_image",
+          "info": "1750x900"
+        },
+        {
+          "type": "image_picker",
+          "label": "Mobile Image",
+          "id": "mobile_image"
+        },
+        {
+          "type": "text",
+          "label": "Banner Caption",
+          "id": "banner_caption",
+          "default": "Caption"
+        },
+        {
+          "type": "text",
+          "label": "Banner Heading left",
+          "id": "banner_heading_left",
+          "default": "Heading"
+        },
+        {
+          "type": "text",
+          "label": "Animated Linked Text",
+          "id": "animated_linked_text",
+          "placeholder": "Link"
+        },
+        {
+          "type": "text",
+          "label": "Banner Heading Right",
+          "id": "banner_heading_right",
+          "placeholder": "Link"
+        },
+        {
+          "type": "url",
+          "label": "Heading Text Url",
+          "id": "heading_text_url"
+        },
+        {
+          "type": "text",
+          "label": "Button Label",
+          "id": "button_label",
+          "default": "Click"
+        },
+        {
+          "type": "url",
+          "label": "Button Url",
+          "id": "button_url"
+        },
+        {
+          "type": "select",
+          "label": "Banner Text Position",
+          "id": "banner_text_position",
+          "options": [
+            {
+              "label": "Top Left",
+              "value": "top-left"
+            },
+            {
+              "label": "Top Center",
+              "value": "top-center"
+            },
+            {
+              "label": "Top Right",
+              "value": "top-right"
+            },
+            {
+              "label": "Middle Left",
+              "value": "middle-left"
+            },
+            {
+              "label": "Middle Center",
+              "value": "middle-center"
+            },
+            {
+              "label": "Middle-right",
+              "value": "middle-right"
+            },
+            {
+              "label": "Bottom Left",
+              "value": "bottom-left"
+            },
+            {
+              "label": "Bottom Center",
+              "value": "bottom-center"
+            },
+            {
+              "label": "Bottom Right",
+              "value": "bottom-right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "label": "Text Align",
+          "id": "text_align",
+          "options": [
+            {
+              "label": "Left",
+              "value": "left"
+            },
+            {
+              "label": "Center",
+              "value": "center"
+            },
+            {
+              "label": "Right",
+              "value": "right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slideshow Hero Banner"
+    }
+  ]
+}
+{% endschema %}

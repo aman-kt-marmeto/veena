@@ -1,42 +1,69 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_hero_banner_a49bzY": {
+      "type": "slideshow-hero-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slides_KBiED7": {
+          "type": "slides",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "desktop_image": "shopify:\/\/shop_images\/1.webp",
+            "mobile_image": "shopify:\/\/shop_images\/1.webp",
+            "banner_caption": "Women's Apparel",
+            "banner_heading_left": "Elevate your wardrobe with our",
+            "animated_linked_text": "limited-time",
+            "banner_heading_right": "fashion offer!",
+            "heading_text_url": "shopify:\/\/collections",
+            "button_label": "Click",
+            "button_url": "",
+            "banner_text_position": "middle-center",
+            "text_align": "center"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slides_qbGTVt": {
+          "type": "slides",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "desktop_image": "shopify:\/\/shop_images\/3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/3.jpg",
+            "banner_caption": "Modern Elegance",
+            "banner_heading_left": "Step into the World of Style with the Latest Fashion Trends Unveiled!",
+            "animated_linked_text": "",
+            "banner_heading_right": "",
+            "heading_text_url": "",
+            "button_label": "Click",
+            "button_url": "shopify:\/\/collections\/sale",
+            "banner_text_position": "middle-left",
+            "text_align": "left"
+          }
+        },
+        "slides_yngwJV": {
+          "type": "slides",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/4.jpg",
+            "banner_caption": "Trendy Classics",
+            "banner_heading_left": "Discover Signature Look: Fashion Forward and Fabulous!",
+            "animated_linked_text": "",
+            "banner_heading_right": "",
+            "heading_text_url": "",
+            "button_label": "Shop Now",
+            "button_url": "",
+            "banner_text_position": "middle-left",
+            "text_align": "left"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slides_KBiED7",
+        "slides_qbGTVt",
+        "slides_yngwJV"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "padding_top": 34,
+        "padding_bottom": 0,
+        "auto_play": "false",
+        "arrow": "false",
+        "pagination": "false",
+        "speed": 500
       }
     },
     "featured_collection": {
@@ -69,7 +96,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "slideshow_hero_banner_a49bzY",
     "featured_collection"
   ]
 }

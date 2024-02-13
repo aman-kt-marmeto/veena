@@ -1,0 +1,183 @@
+.slideshow-hero {
+    width: 100%;
+}
+
+.slideshow-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+
+}
+
+.image-text-block {
+    position: relative;
+}
+
+.slideshow-hero__text-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    letter-spacing: 0.3px;
+    line-height: 28.8px;
+}
+
+.slideshow__heading--color {
+    color: #fff;
+}
+
+
+.slideshow-hero__text-content .banner-inner-content {
+    max-width: 45rem;
+    min-width: 35rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow__caption {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: #ffefef57;
+    width: max-content;
+    padding: 0 5% 0 0;
+}
+
+.slideshow-hero .splide__slide {
+    border-radius: 16px;
+}
+
+.slideshow-hero .left {
+    text-align: start;
+    align-items: start;
+}
+
+.slideshow-hero .right {
+    text-align: end;
+    align-items: end;
+}
+
+.slideshow-hero .center {
+    text-align: center;
+    align-items: center;
+}
+
+.slideshow-hero .middle-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow-hero .middle-left {
+    align-items: center;
+    justify-content: start;
+}
+
+.slideshow-hero .middle-right {
+    align-items: center;
+    justify-content: end;
+}
+
+.slideshow-hero .top-left {
+    align-items: start;
+    justify-content: start;
+}
+
+.slideshow-hero .top-center {
+    align-items: top;
+    justify-content: center;
+}
+
+.slideshow-hero .top-right {
+    align-items: top;
+    justify-content: end;
+}
+
+.slideshow-hero .bottom-right {
+    align-items: end;
+    justify-content: end;
+}
+
+.slideshow-hero .bottom-left {
+    align-items: end;
+    justify-content: start;
+}
+
+.slideshow-hero .bottom-center {
+    align-items: end;
+    justify-content: center;
+}
+
+.splide__arrow svg {
+    fill: #fff;
+    opacity: 1;
+}
+
+.slideshow-hero .splide__arrow--prev,
+.slideshow-hero .splide__arrow--next {
+    top: unset;
+    transform: unset;
+    bottom: 3px;
+    background: transparent;
+    fill: #fff;
+}
+
+.slideshow-hero .splide__arrow:first-child {
+    left: 45%;
+}
+
+.slideshow-hero .splide__arrow:last-child {
+    right: 45%;
+}
+
+
+
+.slideshow-hero .splide .splide__pagination li {
+    display: inline-block;
+    line-height: 0;
+    list-style-type: none;
+    margin: 4px;
+    pointer-events: auto;
+}
+
+
+
+.slideshow-hero .splide button.splide__pagination__page {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    margin: 3px;
+    opacity: .7;
+    padding: 0;
+    position: relative;
+    transition: transform .2s linear;
+    width: 8px;
+}
+
+.splide button.splide__pagination__page.is-active {
+    border-radius: 5px;
+    width: 20px;
+    height: 6px;
+    background: #fff;
+}
+
+.banner__heading a {
+    text-decoration: none;
+    transition: all .4s linear;
+    overflow: hidden;
+}
+
+.banner__heading a {
+    display: inline-block;
+    position: relative;
+}
+
+.banner__heading a:hover {
+    color: #d03c3f;
+}
