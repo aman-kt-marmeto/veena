@@ -1,11 +1,12 @@
 {
   "current": {
+    "logo": "shopify:\/\/shop_images\/n_Veena.png",
     "logo_width": 90,
     "type_header_font": "harmonia_sans_n6",
     "heading_scale": 100,
-    "type_body_font": "assistant_n4",
+    "type_body_font": "assistant_n6",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1750,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
