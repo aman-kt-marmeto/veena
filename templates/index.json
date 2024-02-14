@@ -58,7 +58,7 @@
         "slides_yngwJV"
       ],
       "settings": {
-        "auto_play": "true",
+        "auto_play": "false",
         "arrow": "true",
         "pagination": "true",
         "speed": 500,

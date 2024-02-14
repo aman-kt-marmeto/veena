@@ -4,12 +4,12 @@
     "logo_width": 90,
     "type_header_font": "harmonia_sans_n6",
     "heading_scale": 100,
-    "type_body_font": "assistant_n6",
+    "type_body_font": "harmonia_sans_n4",
     "body_scale": 100,
     "page_width": 1750,
     "spacing_sections": 0,
-    "spacing_grid_horizontal": 8,
-    "spacing_grid_vertical": 8,
+    "spacing_grid_horizontal": 20,
+    "spacing_grid_vertical": 20,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
@@ -188,6 +188,28 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-c0ab0df7-f51e-4ab9-9fd1-3ae40ab0eeb4": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#d03c3f",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0": {
+        "settings": {
+          "background": "{{ shop.brand.colors.primary[0].background }}",
+          "background_gradient": "",
+          "text": "#fff",
+          "button": "#fff",
+          "button_label": "#dd1d1d",
+          "secondary_button_label": "#fff",
           "shadow": "#121212"
         }
       }
