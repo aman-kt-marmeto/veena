@@ -121,7 +121,7 @@
 .slideshow-hero .splide__arrow--next {
     top: unset;
     transform: unset;
-    bottom: 3px;
+    bottom: 4px;
     background: transparent;
     fill: #fff;
 }

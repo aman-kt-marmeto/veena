@@ -43,22 +43,26 @@
                       %}
                     </div>
                   {% else %}
-                    {{ 'collection-1' | placeholder_svg_tag }}
+                    {{ 'product-apparel-1' | placeholder_svg_tag }}
                   {% endif %}
                   <div class="slideshow-hero__text-content {{block.settings.banner_text_position}}">
                     <div class="banner-inner-content {{block.settings.text_align}}">
-                      <div class="slideshow__caption">
-                        <ul>
-                          <li>{{ block.settings.banner_caption }}</li>
-                        </ul>
-                      </div>
-                      <h2 class="banner__heading inline-richtext h1 slideshow__heading--color">
-                        {{ block.settings.banner_heading_left }}
-                        <a href="{{block.settings.heading_text_url}}" title="All collections">
-                          {{- block.settings.animated_linked_text -}}
-                        </a>
-                        {{ block.settings.banner_heading_right }}
-                      </h2>
+                      {% if block.settings.banner_caption != blank %}
+                        <div class="slideshow__caption">
+                          <ul>
+                            <li>{{ block.settings.banner_caption }}</li>
+                          </ul>
+                        </div>
+                      {% endif %}
+                      {% if block.settings.banner_heading_left != blank %}
+                        <h2 class="banner__heading inline-richtext h1 slideshow__heading--color">
+                          {{ block.settings.banner_heading_left }}
+                          <a href="{{block.settings.heading_text_url}}" title="All collections">
+                            {{- block.settings.animated_linked_text -}}
+                          </a>
+                          {{ block.settings.banner_heading_right }}
+                        </h2>
+                      {% endif %}
                       <div class="button--secondary ">
                         {% if block.settings.button_label != blank %}
                           <a href="{{block.settings.button_url}}" target="_blank" class="button">
@@ -96,6 +100,64 @@
   "class": "slideshow-hero-banner",
   "settings": [
     {
+      "type": "select",
+      "label": "Auto Play",
+      "id": "auto_play",
+      "default": "true",
+      "options": [
+        {
+          "label": "ON",
+          "value": "true"
+        },
+        {
+          "label": "OFF",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Arrow",
+      "id": "arrow",
+      "default": "true",
+      "options": [
+        {
+          "label": "Show",
+          "value": "true"
+        },
+        {
+          "label": "Hide",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "label": "Pagination",
+      "id": "pagination",
+      "default": "true",
+      "options": [
+        {
+          "label": "Show",
+          "value": "true"
+        },
+        {
+          "label": "Hide",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "label": "Speed",
+      "id": "speed",
+      "default": 500,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "unit": "ms"
+    },
+    {
       "type": "range",
       "id": "padding_top",
       "label": "Padding Top",
@@ -114,64 +176,6 @@
       "step": 1,
       "unit": "px",
       "default": 0
-    },
-    {
-      "type": "select",
-      "label": "Auto Play",
-      "id": "auto_play",
-      "default": "true",
-      "options": [
-        {
-          "label": "True",
-          "value": "true"
-        },
-        {
-          "label": "False",
-          "value": "false"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "label": "Arrow",
-      "id": "arrow",
-      "default": "true",
-      "options": [
-        {
-          "label": "True",
-          "value": "true"
-        },
-        {
-          "label": "False",
-          "value": "false"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "label": "Pagination",
-      "id": "pagination",
-      "default": "true",
-      "options": [
-        {
-          "label": "True",
-          "value": "true"
-        },
-        {
-          "label": "False",
-          "value": "false"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "label": "Speed",
-      "id": "speed",
-      "default": 500,
-      "min": 500,
-      "max": 1000,
-      "step": 10,
-      "unit": "ms"
     }
   ],
   "blocks": [
@@ -183,13 +187,13 @@
           "type": "image_picker",
           "label": "Desktop Image",
           "id": "desktop_image",
-          "info": "1750x900"
+          "info": "14400x600 recommanded"
         },
         {
           "type": "image_picker",
           "label": "Mobile Image",
           "id": "mobile_image",
-          "info": "1750x900"
+          "info": "400x600 recommanded"
         },
         {
           "type": "text",
