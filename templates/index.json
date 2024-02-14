@@ -58,16 +58,60 @@
         "slides_yngwJV"
       ],
       "settings": {
-        "auto_play": "false",
+        "auto_play": "true",
         "arrow": "true",
         "pagination": "true",
-        "speed": 500,
-        "padding_top": 34,
+        "speed": 1000,
+        "padding_top": 97,
+        "padding_bottom": 100
+      }
+    },
+    "custom_image_grid_6hkF77": {
+      "type": "custom-image-grid",
+      "blocks": {
+        "images_mMkGmY": {
+          "type": "Images",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4264.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Rectangle_4264.jpg",
+            "pre_heading": "Caption",
+            "heading": "Women's Clothing Collection",
+            "button_label": "Button label",
+            "button_link": "shopify:\/\/collections\/accessories",
+            "button_style_secondary": false,
+            "color_scheme": "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0",
+            "content_position": "middle-center",
+            "content_alignment": "center"
+          }
+        },
+        "images_3z9X68": {
+          "type": "Images",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4265.jpg",
+            "pre_heading": "Caption",
+            "heading": "Women's Clothing Collection",
+            "button_label": "Explore",
+            "button_link": "shopify:\/\/collections\/best-seller",
+            "button_style_secondary": false,
+            "color_scheme": "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0",
+            "content_position": "middle-center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "images_mMkGmY",
+        "images_3z9X68"
+      ],
+      "settings": {
+        "full_width": false,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
   },
   "order": [
-    "slideshow_hero_banner_a49bzY"
+    "slideshow_hero_banner_a49bzY",
+    "custom_image_grid_6hkF77"
   ]
 }
