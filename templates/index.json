@@ -60,9 +60,9 @@
       "settings": {
         "padding_top": 34,
         "padding_bottom": 0,
-        "auto_play": "false",
-        "arrow": "false",
-        "pagination": "false",
+        "auto_play": "true",
+        "arrow": "true",
+        "pagination": "true",
         "speed": 500
       }
     },
