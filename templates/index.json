@@ -66,6 +66,48 @@
         "padding_bottom": 0
       }
     },
+    "custom_rich_text_P7GrWY": {
+      "type": "custom-rich-text",
+      "blocks": {
+        "pre_heading_ChNYtY": {
+          "type": "preHeading",
+          "settings": {
+            "pre_heading": "What You Wear"
+          }
+        },
+        "heading_b9tDL6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h2"
+          }
+        },
+        "buttons_UjBFgi": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Explore More",
+            "button_link": "shopify:\/\/collections\/accessories",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "pre_heading_ChNYtY",
+        "heading_b9tDL6",
+        "buttons_UjBFgi"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_image_grid_6hkF77": {
       "type": "custom-image-grid",
       "blocks": {
@@ -112,6 +154,7 @@
   },
   "order": [
     "slideshow_hero_banner_a49bzY",
+    "custom_rich_text_P7GrWY",
     "custom_image_grid_6hkF77"
   ]
 }
