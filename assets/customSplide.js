@@ -1,11 +1,7 @@
 class CustomSplide extends HTMLElement {
     constructor() {
         super();
-        console.log(this)
-        console.log(this.dataset.properties)
-
         this.mySplide = this.querySelector('.splide');
-
         this.options = JSON.parse(
             this.querySelector("#splideProperties").textContent
         );
