@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+ul {
+    list-style: disc;
+}
+
 .slideshow-hero img {
     width: 100%;
     height: auto;
@@ -126,14 +130,27 @@
     fill: #fff;
 }
 
+
+
+
+
 .slideshow-hero .splide__arrow:first-child {
-    left: 42%;
+    left: 35%;
 }
 
 .slideshow-hero .splide__arrow:last-child {
-    right: 42%;
+    right: 35%;
 }
 
+@media screen and (min-width:750px) {
+    .slideshow-hero .splide__arrow:first-child {
+        left: 42%;
+    }
+
+    .slideshow-hero .splide__arrow:last-child {
+        right: 42%;
+    }
+}
 
 
 .slideshow-hero .splide .splide__pagination li {

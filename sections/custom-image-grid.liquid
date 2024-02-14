@@ -2,24 +2,18 @@
 
 <style>
     @media screen and (min-width:750px){
-      .padding-top--{{section.id}}{
+      .padding--{{section.id}}{
           padding-top:{{section.settings.padding_top}}px;
-      }
-
-      .padding-bottom--{{section.id}}{
           padding-bottom:{{section.settings.padding_bottom}}px;
       }
   }
-
   .padding-top--{{section.id}}{
       padding-top:{{section.settings.padding_top | times:0.75 |  round:0}}px;
-  }
-  .padding-bottom--{{section.id}}{
       padding-bottom:{{section.settings.padding_bottom | times:0.75 |  round:0}}px;
   }
 </style>
 
-<div class="custom-image-grid padding-top--{{section.id}} padding-bottom--{{section.id}}">
+<div class="custom-image-grid padding--{{section.id}} padding--{{section.id}}">
   <div class="{% unless section.settings.full_width %} page-width {% endunless %}">
     <div class="grid grid--1-col grid--2-col-desktop">
       {% for block in section.blocks %}
@@ -34,14 +28,14 @@
           <div class="grid-item__text grid grid-item__text--absolute grid-item--{{block.settings.content_position}} color-{{block.settings.color_scheme.id}}">
             <div class="{{block.settings.content_alignment}}">
               {% if block.settings.pre_heading %}
-                <div class="pre-heading h3 flex {{block.settings.content_alignment}}">
+                <div class="pre-heading h4 flex {{block.settings.content_alignment}}">
                   <ul>
                     <li>{{ block.settings.pre_heading }}</li>
                   </ul>
                 </div>
               {% endif %}
               {% if block.settings.heading %}
-                <div class="heading h1">{{ block.settings.heading }}</div>
+                <div class="heading h2">{{ block.settings.heading }}</div>
               {% endif %}
               {%- if block.settings.button_label != blank -%}
                 <a
@@ -66,7 +60,7 @@
 {% schema %}
 {
   "name": "Custom image grid",
-  "class": "image-grid",
+  "class": "image-grid section",
   "tag": "section",
   "settings": [
     {

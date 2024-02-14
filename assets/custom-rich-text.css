@@ -1,5 +1,14 @@
     .rich-text__heading {
         margin: 20px 0;
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    @media screen and (min-width:999px) {
+        .rich-text__heading {
+            font-size: 52px;
+            line-height: 67.6px;
+        }
     }
 
     .rich-text__button-wrapper {
@@ -8,6 +17,8 @@
 
     .rich-text__pre-heading {
         font-weight: var(--font-body-weight);
+        font-size: 16px;
+        color: #000000cc;
     }
 
     .rich-text__wrapper {

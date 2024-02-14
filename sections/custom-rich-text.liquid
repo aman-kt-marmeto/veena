@@ -4,22 +4,17 @@
   @media screen and (min-width:750px){
       .padding-top--{{section.id}}{
           padding-top:{{section.settings.padding_top}}px;
-      }
-
-      .padding-bottom--{{section.id}}{
           padding-bottom:{{section.settings.padding_bottom}}px;
       }
   }
 
   .padding-top--{{section.id}}{
       padding-top:{{section.settings.padding_top | times:0.75 |  round:0}}px;
-  }
-  .padding-bottom--{{section.id}}{
       padding-bottom:{{section.settings.padding_bottom | times:0.75 |  round:0}}px;
   }
 </style>
 
-<div class="custom-rich-text padding-top--{{section.id}} padding-bottom--{{section.id}}">
+<div class="custom-rich-text padding--{{section.id}} padding--{{section.id}}">
   <div
     class=" {% unless section.settings.full_width %} page-width {% endunless %} color-{{ section.settings.color_scheme }}"
   >
@@ -74,7 +69,7 @@
 {
   "name": "Custom rich text",
   "tag": "section",
-  "class": "custom-rich-text",
+  "class": "custom-rich-text section",
   "settings": [
     {
       "type": "select",
