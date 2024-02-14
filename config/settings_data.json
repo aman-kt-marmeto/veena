@@ -7,7 +7,7 @@
     "type_body_font": "harmonia_sans_n4",
     "body_scale": 100,
     "page_width": 1750,
-    "spacing_sections": 0,
+    "spacing_sections": 72,
     "spacing_grid_horizontal": 20,
     "spacing_grid_vertical": 20,
     "animations_reveal_on_scroll": true,
@@ -206,10 +206,10 @@
         "settings": {
           "background": "{{ shop.brand.colors.primary[0].background }}",
           "background_gradient": "",
-          "text": "#fff",
-          "button": "#fff",
+          "text": "#ffffff",
+          "button": "#ffffff",
           "button_label": "#dd1d1d",
-          "secondary_button_label": "#fff",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       }
