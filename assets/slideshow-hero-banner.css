@@ -10,7 +10,8 @@ ul {
     width: 100%;
     height: auto;
     border-radius: 16px;
-
+    min-height: 315px;
+    object-fit: cover;
 }
 
 .image-text-block {
