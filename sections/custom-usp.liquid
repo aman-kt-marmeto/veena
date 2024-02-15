@@ -17,7 +17,8 @@
 {% endstyle %}
 
 <div class="padding--{{section.id}} {% unless section.settings.page_width %} page-width {% endunless %}">
-  <div class="custom-usp page-width">
+  <div class="page-width">
+   <div class="custom-usp">
     <div class="grid grid--2-col grid--4-col-desktop">
       {% for block in section.blocks %}
         <div class="grid__item center">
@@ -31,6 +32,7 @@
         </div>
       {% endfor %}
     </div>
+  </div>
   </div>
 </div>
 
