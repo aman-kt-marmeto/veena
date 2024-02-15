@@ -1,19 +1,19 @@
-<style>
+{% style %}
   @media screen and (min-width:750px){
       .padding--{{section.id}}{
-          padding-top: {{section: .settings.padding_top |   divided_by: 2 |  round:0}};
-          padding-bottom: {{section: .settings.padding_bottom | divided_by: 2 |  round:0}};
+          padding-top: {{section.settings.padding_top |   divided_by: 2 |  round:0}};
+          padding-bottom: {{section.settings.padding_bottom | divided_by: 2 |  round:0}};
       }
   }
 
    .padding--{{section.id}}{
-          padding-top: {{section: .settings.padding_top}};
-          padding-bottom: {{section: .settings.padding_bottom}};
+          padding-top: {{section.settings.padding_top}};
+          padding-bottom: {{section.settings.padding_bottom}};
       }
       .custom-usp{
         background-color: {{section.settings.background_color}};
       }
-</style>
+{% endstyle %}
 
 <div class="padding--{{section.id}} {% unless section.settings.page_width %} page-width {% endunless %}">
   <div class="custom-usp page-width">
