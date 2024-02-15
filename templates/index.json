@@ -66,6 +66,69 @@
         "padding_bottom": 0
       }
     },
+    "custom_lookbook_GTeN8Y": {
+      "type": "custom-lookbook",
+      "blocks": {
+        "lookbook_XzJ3C7": {
+          "type": "lookbook",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/1_86583ec4-835c-45cd-999c-b7e8b1.jpg",
+            "heading": "Women's Winter Clothes",
+            "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
+            "button_label": "Discover More",
+            "button_link": "shopify:\/\/collections",
+            "product_first": "august-rib-wool-oak",
+            "first_dot_position_top_x": 26,
+            "first_dot_position_top_y": 22,
+            "product_second": "black-stripe-spring-oxford-shirt",
+            "second_dot_position_top_x": 36,
+            "second_dot_position_top_y": 70
+          }
+        },
+        "lookbook_pwdAhR": {
+          "type": "lookbook",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/2_a11b3061-4da9-4c80-ad4a-2ed8e9.jpg",
+            "heading": "Our Men's Winter Clothes",
+            "description": "<p>welcome to our Men's Winter Clothes Collection, where every piece is a statement in comfort and style.<\/p>",
+            "button_label": "Discover More",
+            "button_link": "shopify:\/\/collections",
+            "product_first": "carson-chore-jacket-black-hole",
+            "first_dot_position_top_x": 50,
+            "first_dot_position_top_y": 23,
+            "product_second": "denim-chore-coat-black",
+            "second_dot_position_top_x": 33,
+            "second_dot_position_top_y": 76
+          }
+        },
+        "lookbook_HkYpF4": {
+          "type": "lookbook",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/3_e98fbf29-76ef-498a-837a-517c37.jpg",
+            "heading": "Women's Outdoor Clothes Collection",
+            "description": "<p>Embrace the beauty of nature with gear that complements your adventurous spirit.<\/p>",
+            "button_label": "Discover More",
+            "button_link": "shopify:\/\/collections",
+            "product_first": "highland-tee-white",
+            "first_dot_position_top_x": 53,
+            "first_dot_position_top_y": 35,
+            "product_second": "carhartt-coat-black",
+            "second_dot_position_top_x": 42,
+            "second_dot_position_top_y": 71
+          }
+        }
+      },
+      "block_order": [
+        "lookbook_XzJ3C7",
+        "lookbook_pwdAhR",
+        "lookbook_HkYpF4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "custom_rich_text_P7GrWY": {
       "type": "custom-rich-text",
       "blocks": {
@@ -203,6 +266,7 @@
   },
   "order": [
     "slideshow_hero_banner_a49bzY",
+    "custom_lookbook_GTeN8Y",
     "custom_rich_text_P7GrWY",
     "custom_image_grid_6hkF77",
     "custom_usp_7nLFLm"
