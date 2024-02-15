@@ -12,27 +12,31 @@
       }
       .custom-usp{
         background-color: {{section.settings.background_color}};
-        padding:20px 0px;
+
       }
+
+  .      .custom-usp__wrapper{
+    padding:20px 0px;
+  }
 {% endstyle %}
 
-<div class="padding--{{section.id}} {% unless section.settings.page_width %} page-width {% endunless %}">
+<div class="custom-usp padding--{{section.id}} {% unless section.settings.page_width %} page-width {% endunless %}">
   <div class="page-width">
-   <div class="custom-usp">
-    <div class="grid grid--2-col grid--4-col-desktop">
-      {% for block in section.blocks %}
-        <div class="grid__item center">
-          {% if block.settings.usp_svg %}
-            {{ block.settings.usp_svg }}
-          {% else %}
-            {{ 'product-1' | placeholder_svg_tag }}
-          {% endif %}
-          <div class="h2 icon-heading">{{ block.settings.heading }}</div>
-          <div class="h4 icon-description">{{ block.settings.description }}</div>
-        </div>
-      {% endfor %}
+    <div class="custom-usp__wrapper">
+      <div class="grid grid--2-col grid--4-col-desktop">
+        {% for block in section.blocks %}
+          <div class="grid__item center">
+            {% if block.settings.usp_svg %}
+              {{ block.settings.usp_svg }}
+            {% else %}
+              {{ 'product-1' | placeholder_svg_tag }}
+            {% endif %}
+            <div class="h2 icon-heading">{{ block.settings.heading }}</div>
+            <div class="h4 icon-description">{{ block.settings.description }}</div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
   </div>
 </div>
 
