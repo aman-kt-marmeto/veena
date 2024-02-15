@@ -84,7 +84,7 @@
           justify-content: center;
       }
 
-      .grid__item:hover {
+      .custom-image-grid .grid__item:hover {
           img {
               transform: scale(1.05);
           }

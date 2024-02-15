@@ -1,0 +1,301 @@
+{{ 'custom-lookbook.css' | asset_url | stylesheet_tag }}
+{% style %}
+    @media screen and (min-width:750px){
+        .padding--{{section.id}}{
+            padding-top:{{section.settings.padding_top}}px;
+            padding-bottom:{{section.settings.padding_bottom}}px;
+          }
+    }
+    .padding--{{section.id}}{
+         padding-top:{{section.settings.padding_top |  divided_by: 2}}px;
+            padding-bottom:{{section.settings.padding_bottom |  divided_by: 2}}px;
+    }
+
+    {% for block in section.blocks %}
+
+    .lookbook__dot-content-first--{{block.id}} {
+      position: absolute;
+      display: flex;
+      content: "";
+      height: 10rem;
+      width: 25rem;
+      top: {{block.settings.first_dot_position_top_y}}%;
+      left: {{block.settings.first_dot_position_top_x}}%;
+  }
+
+  .lookbook__dot-content-second--{{block.id}} {
+    position: absolute;
+      display: flex;
+      content: "";
+      height: 10rem;
+      width: 25rem;
+      top: {{block.settings.second_dot_position_top_y}}%;
+      left: {{block.settings.second_dot_position_top_x}}%;
+  }
+    {% endfor %}
+{% endstyle %}
+
+<div class="custom-lookbook padding--{{section.id}}">
+  <div class="page-width">
+    <div class="grid grid--1-col grid--3-col-desktop">
+      {% for block in section.blocks %}
+        <div
+          class="
+            grid__item lookbook-item
+            {% if section.settings.color_scheme %} color-{{section.settings.color_scheme}} {% endif %}
+          "
+        >
+          <div class="isolate">
+            <div class="custom-lookbook__image media media--portrait">
+              {% if block.settings.desktop_image != blank %}
+                {% render 'responsive-picture',
+                  desktopImage: block.settings.desktop_image,
+                  mobileImage: block.settings.mobile_image,
+                  class: 'media media--portrait'
+                %}
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag }}
+              {% endif -%}
+            </div>
+            {% if block.settings.product_first != blank %}
+              <div class="lookbook__dot-product lookbook__dot-content-first--{{block.id}}">
+                <div class="shop-the-look__dots__svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    class="icon-circle"
+                  >
+                    <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
+                  </svg>
+                </div>
+                <div class="product-detail product-detail--flex">
+                  <div class="product-detail__image">
+                    {% render 'responsive-picture', desktopImage: block.settings.product_first.featured_image %}
+                  </div>
+                  <div class="product-detail__text">
+                    <div>{{ block.settings.product_first.title }}</div>
+
+                    {% if block.settings.product_first.price_min != blank %}
+                      <div>
+                        <strong> From Rs. {{ block.settings.product_first.price_min | money_without_currency }}</strong>
+                      </div>
+                    {% endif -%}
+                    {% if block.settings.product_first.compare_at_price != blank %}
+                      <div>
+                        <s>Rs. {{ block.settings.product_first.compare_at_price | money_without_currency }}</s>
+                      </div>
+                    {% endif -%}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product_second != blank %}
+              <div class="lookbook__dot-product lookbook__dot-content-second--{{block.id}}">
+                <div class="shop-the-look__dots__svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    class="icon-circle"
+                  >
+                    <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
+                  </svg>
+                </div>
+                <div class="product-detail product-detail--flex">
+                  <div class="product-detail__image">
+                    {% render 'responsive-picture', desktopImage: block.settings.product_second.featured_image %}
+                  </div>
+                  <div class="product-detail__text">
+                    <div>{{ block.settings.product_second.title }}</div>
+
+                    {% if block.settings.product_second.price_min != blank %}
+                      <div>
+                        <strong>
+                          From Rs. {{ block.settings.product_second.price_min | money_without_currency -}}
+                        </strong>
+                      </div>
+                    {% endif -%}
+                    {% if block.settings.product_second.compare_at_price != blank %}
+                      <div>
+                        <s>Rs. {{ block.settings.product_second.compare_at_price | money_without_currency }}</s>
+                      </div>
+                    {% endif -%}
+                  </div>
+                </div>
+              </div>
+            {% endif -%}
+          </div>
+
+          {% if block.settings.heading != blank %}
+            <div class="lookbook__grid__item-heading h2">
+              {{ block.settings.heading }}
+            </div>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <div class="lookbook__grid__item-description h4">
+              {{ block.settings.description }}
+            </div>
+          {% endif %}
+          {%- if block.settings.button_label != blank -%}
+            <a
+              {% if block.settings.button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.button_link }}"
+              {% endif %}
+              class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+            >
+              {{- block.settings.button_label | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {% endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom lookbook",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "default": 0,
+      "step": 1
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Lookbook content",
+      "type": "lookbook",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Image",
+          "info": "1440x900 recommanded"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Image(Mobile)",
+          "info": "400x600 recommanded"
+        },
+        {
+          "type": "text",
+          "default": "Heading",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>About this block</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Click",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Url"
+        },
+        {
+          "type": "header",
+          "content": "First product"
+        },
+        {
+          "type": "product",
+          "id": "product_first",
+          "label": "First product"
+        },
+        {
+          "type": "range",
+          "id": "first_dot_position_top_x",
+          "label": "Position x",
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "default": 0,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "first_dot_position_top_y",
+          "label": "Position y",
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "default": 0,
+          "step": 1
+        },
+        {
+          "type": "header",
+          "content": "Second product"
+        },
+        {
+          "type": "product",
+          "id": "product_second",
+          "label": "Second product"
+        },
+        {
+          "type": "range",
+          "id": "second_dot_position_top_x",
+          "label": "Position x",
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "default": 0,
+          "step": 1
+        },
+        {
+          "type": "range",
+          "id": "second_dot_position_top_y",
+          "label": "Position y",
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "default": 0,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom lookbook"
+    }
+  ]
+}
+{% endschema %}

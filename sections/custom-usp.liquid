@@ -1,34 +1,33 @@
 {% style %}
-  @media screen and (min-width:750px){
-      .padding--{{section.id}}{
-          padding-top: {{section.settings.padding_top |   divided_by: 2 |  round:0}}px;
-          padding-bottom: {{section.settings.padding_bottom | divided_by: 2 |  round:0}}px;
-      }
+    @media screen and (min-width:750px){
+        .padding--{{section.id}}{
+            padding-top: {{section.settings.padding_top |   divided_by: 2 |  round:0}}px;
+            padding-bottom: {{section.settings.padding_bottom | divided_by: 2 |  round:0}}px;
+        }
+    }
+
+     .padding--{{section.id}}{
+            padding-top: {{section.settings.padding_top}}px;
+            padding-bottom: {{section.settings.padding_bottom}}px;
+        }
+        .custom-usp{
+          background-color: {{section.settings.background_color}};
+
+        }
+
+         .custom-usp__wrapper{
+      padding:20px 0px;
+    }
+
+    .custom-usp .grid__item>*{
+      margin:0;
+      padding:0;
+    }
+  .custom-usp .grid__item p{
+    font-size: calc(var(--font-body-scale) * 14px);
+    line-height:normal;
+    color: rgba(var(--color-foreground),.6);
   }
-
-   .padding--{{section.id}}{
-          padding-top: {{section.settings.padding_top}}px;
-          padding-bottom: {{section.settings.padding_bottom}}px;
-      }
-      .custom-usp{
-        background-color: {{section.settings.background_color}};
-
-      }
-
-       .custom-usp__wrapper{
-    padding:20px 0px;
-  }
-
-  .grid__item>*{
-    margin:0;
-    padding:0;
-  }
-.custom-usp .grid__item p{
-  font-size: calc(var(--font-body-scale) * 14px);
-  line-height:normal;
-  color: rgba(var(--color-foreground),.6);
-}
-  
 {% endstyle %}
 
 <div class="custom-usp padding--{{section.id}} {% unless section.settings.page_width %} page-width {% endunless %}">

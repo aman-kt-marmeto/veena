@@ -1,0 +1,75 @@
+.custom-lookbook img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-lookbook__image {
+    border-radius: 20px;
+}
+
+.product-detail {
+    border-radius: 15px;
+}
+
+.lookbook__grid__item-heading {
+    padding-top: 10px;
+}
+
+.lookbook__grid__item-description {
+    color: #ccc;
+}
+
+
+.shop-the-look__dots__svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.shop-the-look__dots__svg circle {
+    fill: #000;
+}
+
+.product-detail {
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    left: 5rem;
+    opacity: 1;
+    transition: 0.3s ease;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.product-detail__image {
+    width: 50%;
+}
+
+.product-detail--flex {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-detail__image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.shop-the-look__dots__svg:hover+.product-detail {
+    visibility: visible;
+    left: 3rem;
+    opacity: 1;
+}
