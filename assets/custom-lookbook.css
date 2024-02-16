@@ -21,7 +21,9 @@
 }
 
 .lookbook__grid__item-description {
-    color: #ccc;
+    color: #000000cc;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 
@@ -75,6 +77,13 @@
     object-fit: cover;
 }
 
+.shop-the-look__dots__svg {
+    transition: .2s linear;
+}
+
+.shop-the-look__dots__svg:hover {
+    transform: scale(1.2);
+}
 
 
 .shop-the-look__dots__svg:hover+.product-detail {

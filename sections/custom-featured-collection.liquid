@@ -1,0 +1,101 @@
+{% style %}
+   @media screen and (min-width:750px){
+   	.padding--{{section.id}}{
+   		padding-top:{{section.settings.padding_top }}px;
+   		padding-bottom:{{section.settings.padding_bottom }}px;
+   	}
+   }
+
+  .padding--{{section.id}}{
+   		padding-top:{{section.settings.padding_top | divided_by:2 }}px;
+   		padding-bottom:{{section.settings.padding_bottom |  divided_by: 2}}px;
+   	}
+{% endstyle %}
+
+<div class="custom-featured-collection"></div>
+
+{% schema %}
+{
+  "name": "Custom featured collection",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h1",
+      "options": [
+        {
+          "label": "Small",
+          "value": "h2"
+        },
+        {
+          "label": "Medium",
+          "value": "h1"
+        },
+        {
+          "label": "Large",
+          "value": "h0"
+        },
+        {
+          "label": "Extra large",
+          "value": "hxl"
+        }
+      ]
+    },
+    {
+      "type": "product_list",
+      "id": "featured_product",
+      "label": "Featured product"
+    },
+    {
+      "type": "select",
+      "id": "featured_collection_style",
+      "label": "Featured collection Style",
+      "default": "grid",
+      "options": [
+        {
+          "label": "Slider",
+          "value": "slider"
+        },
+        {
+          "label": "Grid",
+          "value": "grid"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": "0",
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": "0",
+      "unit": "px"
+    }
+  ]
+}
+{% endschema %}
