@@ -28,7 +28,7 @@
       display: flex;
       content: "";
       height: 10rem;
-      width: 25rem;
+      width: 20rem;
       top: {{block.settings.second_dot_position_top_y}}%;
       left: {{block.settings.second_dot_position_top_x}}%;
   }
@@ -58,76 +58,82 @@
               {% endif -%}
             </div>
             {% if block.settings.product_first != blank %}
-              <div class="lookbook__dot-product lookbook__dot-content-first--{{block.id}}">
-                <div class="shop-the-look__dots__svg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    class="icon-circle"
-                  >
-                    <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
-                  </svg>
-                </div>
-                <div class="product-detail product-detail--flex">
-                  <div class="product-detail__image">
-                    {% render 'responsive-picture', desktopImage: block.settings.product_first.featured_image %}
+              <a href="{{block.settings.product_first.url}}">
+                <div class="lookbook__dot-product lookbook__dot-content-first--{{block.id}}">
+                  <div class="shop-the-look__dots__svg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      class="icon-circle"
+                    >
+                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
+                    </svg>
                   </div>
-                  <div class="product-detail__text">
-                    <div>{{ block.settings.product_first.title }}</div>
+                  <div class="product-detail product-detail--flex">
+                    <div class="product-detail__image-container">
+                      {% render 'responsive-picture', desktopImage: block.settings.product_first.featured_image %}
+                    </div>
+                    <div class="product-detail__text">
+                      <div>{{ block.settings.product_first.title }}</div>
 
-                    {% if block.settings.product_first.price_min != blank %}
-                      <div>
-                        <strong> From Rs. {{ block.settings.product_first.price_min | money_without_currency }}</strong>
-                      </div>
-                    {% endif -%}
-                    {% if block.settings.product_first.compare_at_price != blank %}
-                      <div>
-                        <s>Rs. {{ block.settings.product_first.compare_at_price | money_without_currency }}</s>
-                      </div>
-                    {% endif -%}
+                      {% if block.settings.product_first.price_min != blank %}
+                        <div>
+                          <strong>
+                            From Rs. {{ block.settings.product_first.price_min | money_without_currency -}}
+                          </strong>
+                        </div>
+                      {% endif -%}
+                      {% if block.settings.product_first.compare_at_price != blank %}
+                        <div>
+                          <s>Rs. {{ block.settings.product_first.compare_at_price | money_without_currency }}</s>
+                        </div>
+                      {% endif -%}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             {% endif %}
             {% if block.settings.product_second != blank %}
-              <div class="lookbook__dot-product lookbook__dot-content-second--{{block.id}}">
-                <div class="shop-the-look__dots__svg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                    class="icon-circle"
-                  >
-                    <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
-                  </svg>
-                </div>
-                <div class="product-detail product-detail--flex">
-                  <div class="product-detail__image">
-                    {% render 'responsive-picture', desktopImage: block.settings.product_second.featured_image %}
+              <a href="{{block.settings.product_first.url}}">
+                <div class="lookbook__dot-product lookbook__dot-content-second--{{block.id}}">
+                  <div class="shop-the-look__dots__svg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      class="icon-circle"
+                    >
+                      <circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="currentColor"></circle>
+                    </svg>
                   </div>
-                  <div class="product-detail__text">
-                    <div>{{ block.settings.product_second.title }}</div>
+                  <div class="product-detail product-detail--flex">
+                    <div class="product-detail__image-container">
+                      {% render 'responsive-picture', desktopImage: block.settings.product_second.featured_image %}
+                    </div>
+                    <div class="product-detail__text">
+                      <div>{{ block.settings.product_second.title }}</div>
 
-                    {% if block.settings.product_second.price_min != blank %}
-                      <div>
-                        <strong>
-                          From Rs. {{ block.settings.product_second.price_min | money_without_currency -}}
-                        </strong>
-                      </div>
-                    {% endif -%}
-                    {% if block.settings.product_second.compare_at_price != blank %}
-                      <div>
-                        <s>Rs. {{ block.settings.product_second.compare_at_price | money_without_currency }}</s>
-                      </div>
-                    {% endif -%}
+                      {% if block.settings.product_second.price_min != blank %}
+                        <div>
+                          <strong>
+                            From Rs. {{ block.settings.product_second.price_min | money_without_currency -}}
+                          </strong>
+                        </div>
+                      {% endif -%}
+                      {% if block.settings.product_second.compare_at_price != blank %}
+                        <div>
+                          <s>Rs. {{ block.settings.product_second.compare_at_price | money_without_currency }}</s>
+                        </div>
+                      {% endif -%}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             {% endif -%}
           </div>
 
