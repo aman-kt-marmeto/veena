@@ -1,0 +1,116 @@
+.product-card-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-card-image-container {
+    /* border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding)); */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.product-card-image-container .secondary-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.product-card-image-container:hover .secondary-image {
+    visibility: visible;
+    opacity: 1;
+}
+
+.product-card-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-title a {
+    text-decoration: none;
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: calc(var(--font-body-scale) * 18px);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    transition: all var(--duration-long) ease;
+}
+
+.product-title:hover a {
+    color: #d03c3f;
+}
+
+.swatch-box {
+    position: relative;
+    display: block !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    padding: 2px;
+}
+
+.varient-option {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.varient-option label[checked] {
+    color: #ff8c8c;
+}
+
+input:checked+div {
+    border-color: #d03c3f;
+}
+
+.swatch-box::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.swatch-box:hover {
+    border-color: #d03c3f;
+}
+
+.product-price {
+    color: #000;
+    font-weight: 600;
+}
+
+.price-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-price {
+    color: #fff;
+    background: #dd1d1d;
+    display: inline;
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    /* border-radius: 20px; */
+
+    border-radius: var(--badge-corner-radius);
+    display: inline-block;
+    text-align: center;
+    font-size: calc(var(--font-body-scale) * 11px);
+    padding: 0.4rem 0.8rem;
+    word-break: break-word;
+    line-height: normal;
+}

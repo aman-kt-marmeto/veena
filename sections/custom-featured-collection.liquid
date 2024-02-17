@@ -1,22 +1,46 @@
+{% liquid
+  assign paddingTop = section.settings.padding_top
+  assign paddingBottom = section.setting.padding_bottom
+  assign heading = section.settings.heading
+  assign colorScheme = section.settings.color_scheme
+  assign headingSize = section.settings.heading_size
+  assign products = section.settings.featured_product
+%}
+
 {% style %}
    @media screen and (min-width:750px){
    	.padding--{{section.id}}{
-   		padding-top:{{section.settings.padding_top }}px;
-   		padding-bottom:{{section.settings.padding_bottom }}px;
+   		padding-top:{{paddingTop }}px;
+   		padding-bottom:{{paddingBottom }}px;
    	}
    }
 
   .padding--{{section.id}}{
-   		padding-top:{{section.settings.padding_top | divided_by:2 }}px;
-   		padding-bottom:{{section.settings.padding_bottom |  divided_by: 2}}px;
+   		padding-top:{{paddingTop | divided_by:2 }}px;
+   		padding-bottom:{{paddingBottom |  divided_by: 2}}px;
    	}
 {% endstyle %}
 
-<div class="custom-featured-collection"></div>
+
+
+<div class="custom-featured-collection padding--{{section.id}}">
+  <div class="page-width">
+    <div class="h1">
+      {{heading}}
+    </div>
+<div class="product-container grid grid--4-col-desktop">
+  {% for product in products %} 
+  <div class="grid__item">
+    {% render 'custom-product-card', product:product, section_id:section.id %}
+  </div>
+ {% endfor %}
+</div>
+  </div>
+</div>
 
 {% schema %}
 {
-  "name": "Custom featured collection",
+  "name": "Custom featured",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -83,7 +107,7 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": "0",
+      "default": 0,
       "unit": "px"
     },
     {
@@ -93,8 +117,13 @@
       "min": 0,
       "max": 100,
       "step": 1,
-      "default": "0",
+      "default": 0,
       "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom featured"
     }
   ]
 }

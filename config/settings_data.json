@@ -130,6 +130,71 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "color-swatch": {
+        "type": "color-swatch",
+        "blocks": {
+          "color_settings_9b9zHA": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Dark Blue",
+              "color_code": "#001f80"
+            }
+          },
+          "color_settings_YH8eU7": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "White Smoke",
+              "color_code": "#d6d6d6"
+            }
+          },
+          "color_settings_HBRcNc": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Black",
+              "color_code": "#000000"
+            }
+          },
+          "color_settings_8GhXQH": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Moccasin",
+              "color_code": "#fff9c5"
+            }
+          },
+          "color_settings_die3bq": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Dark Olive Green",
+              "color_code": "#8aaf00"
+            }
+          },
+          "color_settings_bWWDQi": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Deep Pink",
+              "color_code": "#aa336a"
+            }
+          },
+          "color_settings_Kf4CT6": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Deep Sky Blue",
+              "color_code": "#00bfff"
+            }
+          }
+        },
+        "block_order": [
+          "color_settings_9b9zHA",
+          "color_settings_YH8eU7",
+          "color_settings_HBRcNc",
+          "color_settings_8GhXQH",
+          "color_settings_die3bq",
+          "color_settings_bWWDQi",
+          "color_settings_Kf4CT6"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
