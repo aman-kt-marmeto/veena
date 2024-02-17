@@ -101,9 +101,37 @@ input:checked+div {
     color: #fff;
     background: #dd1d1d;
     display: inline;
-    position: absolute;
-    top: 2%;
-    left: 3%;
+    /* position: absolute; */
+    /* border-radius: 20px; */
+    border-radius: var(--badge-corner-radius);
+    display: inline-block;
+    text-align: center;
+    font-size: calc(var(--font-body-scale) * 11px);
+    padding: 0.4rem 0.8rem;
+    word-break: break-word;
+    line-height: normal;
+}
+
+.swatches.center {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swatches-name {
+    font-size: 8px;
+    word-wrap: break-word;
+}
+
+.product-tag {
+    color: #fff;
+    background: green;
+    display: inline;
+    /* position: absolute;
+    top: 5%;
+    left: 3%; */
     /* border-radius: 20px; */
 
     border-radius: var(--badge-corner-radius);
@@ -113,4 +141,70 @@ input:checked+div {
     padding: 0.4rem 0.8rem;
     word-break: break-word;
     line-height: normal;
+}
+
+.product-badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    gap: 5px;
+}
+
+.product-badge-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+}
+
+.product-badge-container .quick-look-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #000;
+    border-radius: var(--buttons-radius-outset);
+    overflow: hidden;
+    padding: 5px 15px;
+    min-width: 100%;
+    box-sizing: border-box;
+    min-height: 0;
+    font-size: calc(var(--font-body-scale) * 14px);
+    letter-spacing: 0;
+    font-weight: var(--font-body-weight-medium);
+}
+
+.product-badge-container .quick-look-button span {
+    z-index: 99;
+}
+
+.product-badge-container .quick-look-button::after {
+    border-radius: var(--buttons-radius-outset);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #d03c3f;
+    transform: translateX(-100%);
+    scale: 1.3;
+    transition: all var(--duration-long) ease;
+}
+
+.product-badge-container .quick-look-button:hover::after {
+    transform: translateX(0%);
+}
+
+@media screen and (min-width: 750px) {
+    .product-badge-container .quick-look-button {
+        font-size: calc(var(--font-body-scale) * 14px);
+    }
 }

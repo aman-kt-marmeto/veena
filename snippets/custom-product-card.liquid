@@ -1,4 +1,4 @@
-{{'custom-product-card.css' | asset_url | stylesheet_tag}}
+{{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
 <script src="{{'custom-product-card.js' |  asset_url}}" defer></script>
 
 {% liquid
@@ -6,77 +6,120 @@
   assign featured_image = current_varient.image | default: product.featured_image
   assign secondary_image = product.images[1] | default: product.featured_image
   assign price = current_varient.price | money_without_currency
-  assign compareAtPrice =  current_varient.compare_at_price | money_without_currency
+  assign compareAtPrice = current_varient.compare_at_price | money_without_currency
   assign inventoryQuantity = current_varient.inventory_quantity
   assign discountPercentage = compareAtPrice | minus: price | times: 100 | divided_by: compareAtPrice | round: 2
+  for tag in product.tags
+    assign myTag = tag | split: 'tag-'
+  endfor
 %}
 
-{% style  %} 
-.inventory_quantity--{{product.id}} {
-  color: {% if inventoryQuantity <= 10 %} red {% else %} green {%endif%};
+{% style %}
+  .inventory_quantity--{{ product.id }} {
+    color: {% if inventoryQuantity <= 10 %} red {% else %} green {% endif %};
 }
 {% endstyle %}
 
 
 <custom-product-card data-product-handle="{{ product.handle }}" data-section-id="{{ section_id }}">
-<div class="product-card-container">
-<div class="product-card-image-container">
-  <div class="primary-image">
-  {% 
-    render 'responsive-picture', 
-    desktopImage:featured_image, 
-    mobile_image:featured_image, 
-    class:"meadia media--portrait" 
-  %}
-</div>
- <div class="secondary-image">
-  {% 
-    render 'responsive-picture', 
-    desktopImage:secondary_image, 
-    mobile_image:secondary_image, 
-    class:"meadia media--portrait" 
-  %}
-</div> 
-
-{% if discountPercentage !=blank %}
-   <div class="discount-price">
-{{discountPercentage}}% 0ff
-</div> 
-  {% endif %}
-</div>
-
-<div class="varient-option item-swatch">
-  {% for varient in product.variants %}   
-  <span href="{{varient.url}}" class="varient-container">
-      <div class="swatches" >
-      <label for="{{varient.id}}" {% if varient.id == current_varient.id %} aria-selected="true" checked {% endif %}>
-        <input type="radio" hidden name="{{product.handle |  handleize}}" id="{{varient.id}}" {% if varient.id == current_varient.id %} aria-selected="true" checked {% endif %}>
-        <div class="swatch-box" data-value="{{varient.title}}"></div>
-        </label>
-
-       
-        <label class="h6" for="{{varient.id}}" {% if varient.id == current_varient.id %} aria-selected="true" checked {% endif %}>
-      {{varient.title}}
-  </label>    
+  <div class="product-card-container">
+    <div class="product-card-image-container">
+      <div class="primary-image">
+        {% render 'responsive-picture'
+          , 
+ desktopImage: featured_image
+          , 
+ mobile_image: featured_image
+          , 
+ class: "meadia media--portrait"
+        %}
+      </div>
+      <div class="secondary-image">
+        {% render 'responsive-picture'
+          , 
+ desktopImage: secondary_image
+          , 
+ mobile_image: secondary_image
+          , 
+ class: "meadia media--portrait"
+        %}
+      </div>
+      <div class="product-badge-container">
+        <div class="product-badge">
+          {% if myTag != blank %}
+            <div class="product-tag">{{ myTag }}</div>
+          {% endif %}
+          {% if discountPercentage != blank %}
+            <div class="discount-price">
+              {{ discountPercentage }}% 0ff
+            </div>
+          {% endif %}
+        </div>
+        <div class="badge-button">
+          <a href="{{product.url}}" class="quick-look-button">
+            <span>Quick Look</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </span> 
-  {% endfor %}
-</div>
-<div class="vendor-name center">
-  {{product.vendor}}
-</div>
-<div class="product-title h5 center">
-  <a href="{{product.url}}" class="center">{{product.title}}</a>
-</div>
 
-<div class="price-container">
-  <div class="product-price">Rs. {{price}}</div>
-{% if compareAtPrice !=blank %} 
-<div class="product-compare-price"><s>Rs. {{compareAtPrice }}</s></div>
- {% endif %}
-</div>
-<div class="inventory_quantity--{{product.id}} center">{%if inventoryQuantity == 0%} out of stock {% else %} {{inventoryQuantity}} in stock {%endif%} </div>
-</div>
+    <div class="varient-option item-swatch">
+      {% for varient in product.variants %}
+        <span href="{{varient.url}}" class="varient-container">
+          <div class="swatches center">
+            <label
+              for="{{varient.id}}"
+              {% if varient.id == current_varient.id %}
+              aria-selected="true"
+              checked
+              {% endif %}>
+              <input
+                type="radio"
+                hidden
+                name="{{product.handle |  handleize}}"
+                id="{{varient.id}}"
+                {% if varient.id == current_varient.id %}
+                aria-selected="true"
+                checked
+                {% endif %}>
+              <div class="swatch-box" data-value="{{varient.title}}"></div>
+            </label>
+            <label
+              class="swatches-name"
+              for="{{varient.id}}"
+              {% if varient.id == current_varient.id %}
+              aria-selected="true"
+              checked
+              {% endif %}>
+              {{ varient.title }}
+            </label>
+          </div>
+        </span>
+      {% endfor %}
+    </div>
+    <div class="vendor-name center">
+      {{ product.vendor }}
+    </div>
+    <div class="product-title h5 center">
+      <a href="{{product.url}}" class="center">{{ product.title }}</a>
+    </div>
+
+    <div class="price-container">
+      <div class="product-price">Rs. {{ price }}</div>
+      {% if compareAtPrice != blank %}
+        <div class="product-compare-price">
+          <s>Rs. {{ compareAtPrice }}</s>
+        </div>
+      {% endif %}
+    </div>
+    <div class="inventory_quantity--{{product.id}} center">
+      {% if inventoryQuantity == 0 %}
+        out of stock
+      {% else %}
+        {{ inventoryQuantity }} in stock
+      {% endif %}
+    </div>
+  </div>
 
   <script class="product-varients">
     {{product.variants | json}}
