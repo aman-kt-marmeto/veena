@@ -1,0 +1,281 @@
+{% liquid
+  assign paddingTop = section.settings.padding_top
+  assign paddingBottom = section.setting.padding_bottom
+  assign heading = section.settings.heading
+  assign headingSize = section.settings.heading_size
+  assign sliderType = section.settings.slider_type
+  assign pagination =section.settings.pagination
+  assign perPage = section.settings.perPage
+  assign speed = section.settings.speed
+  assign autoplay = section.settings.autoplay
+  assign arrows = section.settings.arrows
+  assign blocks = section.blocks
+  assign colorScheme = section.settings.color_scheme
+%}
+
+{% style %}
+  @media screen and (min-width: 750px) {
+    .padding--{{ section.id }} {
+      padding-top: {{ paddingTop }}px;
+      padding-bottom: {{ paddingBottom }}px;
+    }
+  }
+  .padding--{{ section.id }} {
+    padding-top: {{ paddingTop | divided_by:2 }}px;
+    padding-bottom: {{ paddingBottom |  divided_by: 2 }}px;
+  }
+
+  .custom-customer-review {
+    background-color: #f5f5f5;
+  }
+
+
+  .custom-customer-review .slide-image-container {
+    width: 100%;
+    max-width: 60px;
+  }
+
+  .custom-customer-review .testimonial {
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  .customer-review-text .customer-comment {
+    font-size: calc(var(--font-body-scale) * 16px);
+    line-height: 22px;
+    margin: 0;
+    line-height: 20px;
+    color: rgba(var(--color-foreground));
+    word-break: break-word;
+  }
+
+  .slide-image-wrapper {
+    display: flex;
+    width: 100%;
+    align_items: center;
+    justify-content: center;
+  }
+
+{% endstyle %}
+
+
+<div class="custom-customer-review padding--{{section.id}} color--{{colorScheme.id}}">
+  <div class="page-width">
+    <div class="{{headingSize}} title-wrapper">{{ heading }}</div>
+    <Custom-Splide>
+      <div class="splide">
+        <div div class="splide__track">
+          <ul class="splide__list">
+            {% for block in blocks %}
+              <li class="splide__slide">
+                <div class="testimonial slide-container">
+                  <div class="slide-image-wrapper">
+                    <div class="slide-image-container">
+                      {% if block.settings.profile_picture != blank %}
+                        {% render 'responsive-picture'
+                          ,
+ desktopImage: block.settings.profile_picture
+                          ,
+ mobileImage: collection.featured_image
+                          ,
+ class: "media media--circle"
+                        %}
+                      {% else %}
+
+                      {% endif %}
+                    </div>
+                  </div>
+                  <div class="customer-review-text">
+                    <div class="h3 center">{{ block.settings.customer_name }}</div>
+                    <div class="h3 center">{{ block.settings.customer_profession }}</div>
+                    <div class="customer-comment">{{ block.settings.customer_comment }}</div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <script id="splideProperties">
+        {
+          "autoplay": false,
+          "perPage": 3,
+           "gap": "2rem"
+        }
+      </script>
+    </Custom-Splide>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom customer review",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Customer Reviews"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our customer reviews"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h0",
+            "label": "Large"
+          }, {
+            "value": "h1",
+            "label": "Medium"
+          }, {
+            "value": "h2",
+            "label": "Small"
+          }
+        ],
+        "default": "h1",
+        "label": "Heading Size"
+      },
+      {
+        "type": "header",
+        "content": "Slider Settings"
+      }, {
+        "type": "select",
+        "id": "slider_type",
+        "label": "Animation type",
+        "options": [
+          {
+            "value": "loop",
+            "label": "Loop"
+          }, {
+            "value": "slide",
+            "label": "Slide"
+          }, {
+            "value": "fade",
+            "label": "Fade"
+          }
+        ],
+        "default": "loop"
+      }, {
+        "type": "range",
+        "id": "perPage",
+        "min": 1,
+        "max": 15,
+        "step": 1,
+        "label": "Per Page",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "speed",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "label": "Speed of slide",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "interval",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "label": "Slider timing",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "gap",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "label": "Gap between slides in rem",
+        "default": 2
+      }, {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Enable Autoplay",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "arrows",
+        "label": "Enable Arrows",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "pagination",
+        "label": "Show Dots",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "rewind",
+        "label": "Rewind Slider",
+        "default": true
+      }, {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": " Color Schema",
+        "info": "applies color schema to whole section",
+        "default": "scheme-1"
+      }, {
+        "type": "header",
+        "content": "Section padding"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 30
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Review content",
+        "type": "review_block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "profile_picture",
+            "label": "Profile picture"
+          }, {
+            "type": "text",
+            "id": "customer_name",
+            "label": "Customer name",
+            "default": "Sarah Mitchell"
+          }, {
+            "type": "text",
+            "label": "Customer profession",
+            "id": "customer_profession",
+            "default": "Stylist"
+          }, {
+            "type": "richtext",
+            "label": "Customer comment",
+            "id": "customer_comment",
+            "default": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom customer review"
+      }
+    ]
+  }
+{% endschema %}

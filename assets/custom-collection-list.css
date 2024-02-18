@@ -1,0 +1,109 @@
+.slide-container {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.custom-collection-list .splide__arrow {
+    height: 4.4rem;
+    width: 4.4rem;
+    opacity: 1;
+    background-color: #d03c3f;
+}
+
+.custom-collection-list .splide__arrow svg {
+    z-index: 99;
+}
+
+.custom-collection-list .splide__arrow[disabled] {
+    visibility: hidden;
+}
+
+.custom-collection-list .splide__arrow--next {
+    border-radius: 50% 0% 0% 50%;
+    right: 0;
+}
+
+.custom-collection-list .splide__arrow--prev {
+    border-radius: 0% 50% 50% 0%;
+    left: 0;
+}
+
+.custom-collection-list .slide-container img {
+    transition: all 0.8s ease;
+}
+
+.custom-collection-list .slide-container:hover img {
+    transform: scale(1.06);
+}
+
+.custom-collection-list .text-button-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.collections-title {
+    color: #fff;
+}
+
+.text-button-container .collection-list-btn {
+    text-decoration: none;
+    border: 2px solid #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border-radius: var(--buttons-radius-outset);
+    overflow: hidden;
+    padding: 5px 15px;
+    min-width: 100%;
+    box-sizing: border-box;
+    min-height: 0;
+    font-size: calc(var(--font-body-scale) * 14px);
+    letter-spacing: 0;
+    font-weight: var(--font-body-weight-medium);
+    transition: all .7s ease;
+    margin-top: 20px;
+}
+
+.text-button-container .collection-list-btn span {
+    z-index: 99;
+}
+
+.text-button-container .collection-list-btn::after {
+    border-radius: var(--buttons-radius-outset);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    transform: translateX(-100%);
+    transition: all var(--duration-long) ease;
+}
+
+.text-button-container .collection-list-btn:hover::after {
+    transform: translateX(0%);
+}
+
+.collection-list-btn:hover {
+    color: #d03c3f;
+}
+
+@media screen and (min-width: 750px) {
+    .product-badge-container .collection-list-btn {
+        font-size: calc(var(--font-body-scale) * 14px);
+    }
+}

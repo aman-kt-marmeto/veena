@@ -66,6 +66,97 @@
         "padding_bottom": 0
       }
     },
+    "custom_customer_review_d6HpjX": {
+      "type": "custom-customer-review",
+      "blocks": {
+        "review_block_h7QBHJ": {
+          "type": "review_block",
+          "settings": {
+            "profile_picture": "shopify:\/\/shop_images\/3_b85a25e7-eff6-49ab-9fc7-ecdf71.jpg",
+            "customer_name": "Sarah Mitchell",
+            "customer_profession": "Stylist",
+            "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
+          }
+        },
+        "review_block_dQQfxz": {
+          "type": "review_block",
+          "settings": {
+            "profile_picture": "shopify:\/\/shop_images\/4_e6c9abf8-cab4-4c51-8b5c-b87f68.jpg",
+            "customer_name": "Sarah Mitchell",
+            "customer_profession": "Stylist",
+            "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
+          }
+        },
+        "review_block_BGgUTG": {
+          "type": "review_block",
+          "settings": {
+            "profile_picture": "shopify:\/\/shop_images\/2_0b300886-b49e-4ef1-a786-f0b7f7.jpg",
+            "customer_name": "Sarah Mitchell",
+            "customer_profession": "Stylist",
+            "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
+          }
+        },
+        "review_block_8d4NJw": {
+          "type": "review_block",
+          "settings": {
+            "profile_picture": "shopify:\/\/shop_images\/1_2db38707-707e-4fd6-ab12-35397e.jpg",
+            "customer_name": "Sarah Mitchell",
+            "customer_profession": "Stylist",
+            "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_block_h7QBHJ",
+        "review_block_dQQfxz",
+        "review_block_BGgUTG",
+        "review_block_8d4NJw"
+      ],
+      "settings": {
+        "heading": "Our customer reviews",
+        "heading_size": "h1",
+        "slider_type": "loop",
+        "perPage": 1,
+        "speed": 1,
+        "interval": 1,
+        "gap": 2,
+        "autoplay": true,
+        "arrows": true,
+        "pagination": true,
+        "rewind": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
+    "custom_collection_list_E6NTBk": {
+      "type": "custom-collection-list",
+      "settings": {
+        "heading": "Captivating Collections",
+        "heading_size": "h1",
+        "button_label": "Shop Now",
+        "collection_list": [
+          "accessories-1",
+          "mens-jacket",
+          "shoes",
+          "handbags",
+          "best-selling",
+          "t-shirt-1"
+        ],
+        "slider_type": "loop",
+        "perPage": 5,
+        "speed": 1,
+        "interval": 6,
+        "gap": 2,
+        "autoplay": true,
+        "arrows": true,
+        "pagination": false,
+        "rewind": true,
+        "color_scheme": "",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
     "custom_featured_collection_GFQNyn": {
       "type": "custom-featured-collection",
       "settings": {
@@ -282,6 +373,8 @@
   },
   "order": [
     "slideshow_hero_banner_a49bzY",
+    "custom_customer_review_d6HpjX",
+    "custom_collection_list_E6NTBk",
     "custom_featured_collection_GFQNyn",
     "custom_lookbook_GTeN8Y",
     "custom_rich_text_P7GrWY",

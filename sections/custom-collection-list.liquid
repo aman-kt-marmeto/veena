@@ -1,0 +1,242 @@
+{{ 'custom-collection-list.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign paddingTop = section.settings.padding_top
+  assign paddingBottom = section.setting.padding_bottom
+  assign heading = section.settings.heading
+  assign collectionList = section.settings.collection_list
+  assign colorScheme = section.settings.color_scheme
+  assign headingSize = section.settings.heading_size
+  assign buttonLabel = section.settings.button_label
+  assign sliderType = section.settings.slider_type
+  assign pagination =section.settings.pagination
+  assign perPage = section.settings.perPage
+  assign speed = section.settings.speed
+  assign autoplay = section.settings.autoplay
+  assign arrows = section.settings.arrows
+%}
+
+
+{% style %}
+  @media screen and (min-width: 750px) {
+    .padding--{{ section.id }} {
+      padding-top: {{ paddingTop }}px;
+      padding-bottom: {{ paddingBottom }}px;
+    }
+  }
+  .padding--{{ section.id }} {
+    padding-top: {{ paddingTop | divided_by:2 }}px;
+    padding-bottom: {{ paddingBottom |  divided_by: 2 }}px;
+  }
+{% endstyle %}
+
+<div class="custom-collection-list padding--{{section.id}} color--{{colorScheme.id}}">
+  <div class="page-width">
+    <div class="{{headingSize}} title-wrapper">{{ heading }}</div>
+    <Custom-Splide>
+      <div class="splide">
+        <div div class="splide__track">
+          <ul class="splide__list">
+            {% for collection in collectionList %}
+              <li class="splide__slide">
+                <div class="slide-container">
+                  <div class="slide-image-container">
+                    {% if collection.featured_image != blank %}
+                      {% render 'responsive-picture'
+                        ,
+ desktopImage: collection.featured_image
+                        ,
+ mobileImage: collection.featured_image
+                        ,
+ class: "media media--portrait"
+                      %}
+                    {% else %}
+
+                    {% endif %}
+                  </div>
+                  <div class="text-button-container">
+                    <div class="h2 collections-title">{{ collection.title }}</div>
+                    <div class="badge-button">
+                      <a href="{{collection.url}}" class="collection-list-btn quick-look-button">
+                        <span>{{ buttonLabel }}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <script id="splideProperties">
+        {
+          "autoplay": {{ autoplay }},
+          "perPage": {{perPage}},
+          "arrows": {{ arrows }},
+           "gap": "{{ section.settings.gap |  append: 'rem'}}",
+           "rewind": {{ section.settings.rewind }},
+           "pagination": {{pagination}},
+           "breakpoints":{
+            "640": {
+        			"perPage": 2
+              }
+              },
+              "type": "{{sliderType}}"
+          }
+      </script>
+    </Custom-Splide>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom collections list",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Captivating Collections"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h0",
+            "label": "Large"
+          }, {
+            "value": "h1",
+            "label": "Medium"
+          }, {
+            "value": "h2",
+            "label": "Small"
+          }
+        ],
+        "default": "h1",
+        "label": "Heading Size"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label",
+        "default": "Shop Now"
+      }, {
+        "type": "collection_list",
+        "id": "collection_list",
+        "label": "Collections"
+      }, {
+        "type": "header",
+        "content": "Slider Settings"
+      }, {
+        "type": "select",
+        "id": "slider_type",
+        "label": "Animation type",
+        "options": [
+          {
+            "value": "loop",
+            "label": "Loop"
+          }, {
+            "value": "slide",
+            "label": "Slide"
+          }, {
+            "value": "fade",
+            "label": "Fade"
+          }
+        ],
+        "default": "loop"
+      }, {
+        "type": "range",
+        "id": "perPage",
+        "min": 1,
+        "max": 15,
+        "step": 1,
+        "label": "Per Page",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "speed",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "label": "Speed of slide",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "interval",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "label": "Slider timing",
+        "default": 1
+      }, {
+        "type": "range",
+        "id": "gap",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "label": "Gap between slides in rem",
+        "default": 2
+      }, {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Enable Autoplay",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "arrows",
+        "label": "Enable Arrows",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "pagination",
+        "label": "Show Dots",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "rewind",
+        "label": "Rewind Slider",
+        "default": true
+      }, {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": " Color Schema",
+        "info": "applies color schema to whole section",
+        "default": "scheme-1"
+      }, {
+        "type": "header",
+        "content": "Section padding"
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 30
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 30
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom collections list"
+      }
+    ]
+  }
+{% endschema %}
