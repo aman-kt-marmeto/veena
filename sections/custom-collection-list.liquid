@@ -11,7 +11,6 @@
   assign sliderType = section.settings.slider_type
   assign pagination =section.settings.pagination
   assign perPage = section.settings.perPage
-  assign speed = section.settings.speed
   assign autoplay = section.settings.autoplay
   assign arrows = section.settings.arrows
 %}
@@ -51,7 +50,7 @@
  class: "media media--portrait"
                       %}
                     {% else %}
-
+                      {{ 'product-2' | placeholder_svg_tag }}
                     {% endif %}
                   </div>
                   <div class="text-button-container">

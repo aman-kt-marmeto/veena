@@ -1,6 +1,8 @@
+{{ 'custom-customer-review.css' | asset_url | stylesheet_tag }}
+
 {% liquid
   assign paddingTop = section.settings.padding_top
-  assign paddingBottom = section.setting.padding_bottom
+  assign paddingBottom = section.settings.padding_bottom
   assign heading = section.settings.heading
   assign headingSize = section.settings.heading_size
   assign sliderType = section.settings.slider_type
@@ -22,40 +24,10 @@
   }
   .padding--{{ section.id }} {
     padding-top: {{ paddingTop | divided_by:2 }}px;
-    padding-bottom: {{ paddingBottom |  divided_by: 2 }}px;
+    padding-bottom: {{ paddingBottom |  divided_by: 2 }}
+    px !important;
   }
 
-  .custom-customer-review {
-    background-color: #f5f5f5;
-  }
-
-
-  .custom-customer-review .slide-image-container {
-    width: 100%;
-    max-width: 60px;
-  }
-
-  .custom-customer-review .testimonial {
-    padding: 25px;
-    border-radius: 20px;
-    background-color: #fff;
-  }
-
-  .customer-review-text .customer-comment {
-    font-size: calc(var(--font-body-scale) * 16px);
-    line-height: 22px;
-    margin: 0;
-    line-height: 20px;
-    color: rgba(var(--color-foreground));
-    word-break: break-word;
-  }
-
-  .slide-image-wrapper {
-    display: flex;
-    width: 100%;
-    align_items: center;
-    justify-content: center;
-  }
 
 {% endstyle %}
 
@@ -87,8 +59,8 @@
                     </div>
                   </div>
                   <div class="customer-review-text">
-                    <div class="h3 center">{{ block.settings.customer_name }}</div>
-                    <div class="h3 center">{{ block.settings.customer_profession }}</div>
+                    <div class="h3 center customer-name">{{ block.settings.customer_name }}</div>
+                    <div class="h5 center customer-profession">{{ block.settings.customer_profession }}</div>
                     <div class="customer-comment">{{ block.settings.customer_comment }}</div>
                   </div>
                 </div>
@@ -232,7 +204,7 @@
         "step": 1,
         "unit": "px",
         "label": "Padding top",
-        "default": 30
+        "default": 60
       }, {
         "type": "range",
         "id": "padding_bottom",
@@ -241,7 +213,7 @@
         "step": 1,
         "unit": "px",
         "label": "Padding bottom",
-        "default": 30
+        "default": 60
       }
     ],
     "blocks": [

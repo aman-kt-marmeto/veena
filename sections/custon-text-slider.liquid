@@ -1,3 +1,5 @@
+{{ 'custom-text-slider.css' | asset_url | stylesheet_tag }}
+
 {% style %}
   @media screen and (min-width: 750px) {
     .padding--{{ section.id }} {
@@ -11,6 +13,27 @@
   }
 {% endstyle %}
 
+<div class="custom-marquee padding--{{section.id}}">
+  <div class="marquee">
+    {% for i in (1..9) %}
+      {% for block in section.blocks %}
+        <div class="marquee-item">
+          <div class="marquee-svg">
+            {{ block.settings.svg }}
+          </div>
+          <div class="marquee-text">
+            {{ block.settings.slider_text }}
+          </div>
+          <div class="marquee--button">
+            <a href="{{block.settings.button_url}}" class="button {{block.settings.button_type}}">
+              <span>{{ block.settings.button_label }}</span>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
 
 {% schema %}
   {
@@ -74,20 +97,39 @@
             "type": "html",
             "id": "svg",
             "label": "svg"
-          }, {
+          },
+          {
             "type": "text",
             "id": "slider_text",
             "label": "Slider text",
             "default": "New collection"
-          }, {
+          },
+          {
             "type": "text",
             "id": "button_label",
             "label": "Button label",
             "default": "explore"
-          }, {
+          },
+          {
             "type": "url",
             "id": "button_url",
             "label": "Button url"
+          }, {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button Type",
+            "options": [
+              {
+                "label": "Primary buttton",
+                "value": "button--primary"
+              }, {
+                "label": "Secondary button",
+                "value": "button--secondary"
+              }, {
+                "label": "Ternary button",
+                "value": "button--tertiary"
+              }
+            ]
           }
         ]
       }

@@ -1,0 +1,79 @@
+{{ 'custom-logo-slide.css' | asset_url | stylesheet_tag }}
+
+
+{% style %}
+  @media screen and (min-width: 750px) {
+    .padding--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .padding--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times:0.75 |  round:0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times:0.75 |  round:0 }}px;
+  }
+{% endstyle %}
+
+<div class="custom-logo-slide padding--{{section.id}}">
+  <div class=" logo-container ">
+    {% for block in section.blocks %}
+      <div class="logo center">
+        {% render 'responsive-picture'
+          ,
+ desktopImage: block.settings.logo
+          ,
+ mobileImage: block.settings.logo
+        %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom logo slide",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 30
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 30
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom logo slide"
+      }
+    ]
+
+  }
+{% endschema %}

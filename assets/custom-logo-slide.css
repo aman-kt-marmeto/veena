@@ -1,0 +1,28 @@
+.custom-logo-slide {
+    overflow: scroll;
+    background-color: #f5f5f5;
+}
+
+.custom-logo-slide .logo-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.custom-logo-slide .logo-container picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: calc(170px)
+}
+
+.custom-logo-slide::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* .custom-logo-slide .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+} */
