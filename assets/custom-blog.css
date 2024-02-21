@@ -1,0 +1,130 @@
+.custom-blog .splide__arrow {
+    height: 4.4rem;
+    width: 4.4rem;
+    opacity: 1;
+    background-color: #d03c3f;
+    background: radial-gradient(ellipse, #D03C3F 50%, black 50%);
+    background-size: 700% 450%;
+    background-position: right;
+    transition: all 1s ease-out;
+}
+
+.custom-blog .splide__arrow:hover {
+    background-position: center;
+    background-size: 150% 300%;
+}
+
+.custom-blog .splide__arrow[disabled] {
+    visibility: hidden;
+}
+
+.custom-blog .splide__arrow--next {
+    border-radius: 50% 0% 0% 50%;
+    right: 0;
+}
+
+.custom-blog .splide__arrow--prev {
+    border-radius: 0% 50% 50% 0%;
+    left: 0;
+}
+
+.custom-blog {
+    line-height: normal;
+}
+
+.custom-blog a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-blog a:hover {
+    color: #d03c3f;
+}
+
+.custom-blog__tags a {
+    color: #d03c3f;
+    transition: color 0.3s ease;
+    text-transform: capitalize;
+}
+
+.custom-blog__tags:hover a {
+    color: #000;
+}
+
+
+
+.custom-blog--image-wrapper {
+    border-radius: 20px;
+    flex-basis: 100%;
+    overflow: hidden;
+}
+
+.custom-blog--image-wrapper picture {
+    background-color: transparent;
+}
+
+.custom-blog--image-wrapper img {
+    display: block;
+    transition: transform 0.7s ease;
+    border-radius: 20px;
+}
+
+.custom-blog--image-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+
+.custom-blog .slide-container {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+    border-radius: 20px;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width:640px) {
+    .custom-blog li {
+        margin-bottom: 20px;
+    }
+}
+
+.custom-text-content {
+    flex-basis: 100%;
+    padding: 15px;
+}
+
+.custom-blog__author {
+    color: #000;
+}
+
+.custom-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.custom-text-content .custom-blog__published-date {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-text-content .custom-blog__published-date a {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.custom-blog__published-date {
+    min-height: 4.4rem;
+}
+
+.custom-blog__published-date>* {
+    display: flex;
+    align-items: center;
+}
+
+.text-upper>* {
+    margin-bottom: 10px;
+}

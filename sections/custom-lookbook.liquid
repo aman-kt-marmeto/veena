@@ -37,6 +37,9 @@
 
 <div class="custom-lookbook padding--{{section.id}}">
   <div class="page-width">
+    <div class="h1 title-wrapper">
+      {{ section.settings.main_heading }}
+    </div>
     <div class="grid grid--1-col grid--3-col-desktop">
       {% for block in section.blocks %}
         <div
@@ -156,7 +159,7 @@
               {% endif %}
               class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
             >
-              {{- block.settings.button_label | escape -}}
+              <span>{{- block.settings.button_label | escape -}}</span>
             </a>
           {%- endif -%}
         </div>
@@ -195,7 +198,13 @@
       "unit": "px",
       "default": 0,
       "step": 1
-    }
+    },
+    {
+          "type": "text",
+          "default": "Heading",
+          "id": "main_heading",
+          "label": "Shop the look"
+        }
   ],
   "blocks": [
     {

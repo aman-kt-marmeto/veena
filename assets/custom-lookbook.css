@@ -97,3 +97,17 @@
     left: 3rem;
     opacity: 1;
 }
+
+.custom-lookbook .button::after {
+    border: none;
+    outline: none;
+    background-color: #d03c3f;
+}
+
+.custom-lookbook .button {
+    color: #fff;
+}
+
+.custom-lookbook .button span {
+    z-index: 99;
+}

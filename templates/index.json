@@ -129,6 +129,8 @@
         "logo_DgyWRW"
       ],
       "settings": {
+        "padding_top": 30,
+        "padding_bottom": 30
       }
     },
     "custom_customer_review_d6HpjX": {
@@ -181,16 +183,16 @@
         "heading": "Our customer reviews",
         "heading_size": "h1",
         "slider_type": "loop",
-        "perPage": 1,
+        "perPage": 3,
         "speed": 1,
         "interval": 1,
         "gap": 2,
-        "autoplay": true,
+        "autoplay": false,
         "arrows": true,
         "pagination": true,
         "rewind": true,
         "color_scheme": "scheme-2",
-        "padding_top": 30,
+        "padding_top": 60,
         "padding_bottom": 30
       }
     },
@@ -480,6 +482,36 @@
         "padding_bottom": 0,
         "padding_top": 0
       }
+    },
+    "custom_blog_RdUhjD": {
+      "type": "custom-blog",
+      "blocks": {
+        "blog_VBVXtQ": {
+          "type": "blog",
+          "settings": {
+            "blog": "fashion"
+          }
+        }
+      },
+      "block_order": [
+        "blog_VBVXtQ"
+      ],
+      "settings": {
+        "heading": "Let You Know",
+        "heading_size": "h1",
+        "slider_type": "loop",
+        "perPage": 2,
+        "speed": 1,
+        "interval": 1,
+        "gap": 2,
+        "autoplay": false,
+        "arrows": true,
+        "pagination": false,
+        "rewind": true,
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -492,6 +524,7 @@
     "custom_lookbook_GTeN8Y",
     "custom_rich_text_P7GrWY",
     "custom_image_grid_6hkF77",
-    "custom_usp_7nLFLm"
+    "custom_usp_7nLFLm",
+    "custom_blog_RdUhjD"
   ]
 }

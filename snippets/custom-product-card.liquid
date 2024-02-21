@@ -1,6 +1,7 @@
 {{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
 <script src="{{'custom-product-card.js' |  asset_url}}" defer></script>
-
+{{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
+<script src="{{'custom-product-card.js' |  asset_url}}" defer></script>
 {% liquid
   assign current_varient = product.selected_or_first_available_variant
   assign featured_image = current_varient.image | default: product.featured_image
@@ -10,7 +11,10 @@
   assign inventoryQuantity = current_varient.inventory_quantity
   assign discountPercentage = compareAtPrice | minus: price | times: 100 | divided_by: compareAtPrice | round: 2
   for tag in product.tags
-    assign myTag = tag | split: 'tag-'
+    if tag contains 'tag-'
+      assign myTag = tag | split: 'tag-'
+      break
+    endif
   endfor
 %}
 
@@ -21,7 +25,11 @@
 {% endstyle %}
 
 
-<custom-product-card data-product-handle="{{ product.handle }}" data-section-id="{{ section_id }}">
+<custom-product-card
+  data-product-handle="{{ product.handle }}"
+  data-section-id="{{ section_id }}"
+  data-product-id="{{product.id}}"
+  data-product-url="{{product.url}}">
   <div class="product-card-container">
     <div class="product-card-image-container">
       <div class="primary-image">
@@ -56,7 +64,7 @@
           {% endif %}
         </div>
         <div class="badge-button">
-          <a href="{{product.url}}" class="quick-look-button">
+          <a class="quick-look-button">
             <span>Quick Look</span>
           </a>
         </div>
@@ -103,7 +111,9 @@
     <div class="product-title h5 center">
       <a href="{{product.url}}" class="center">{{ product.title }}</a>
     </div>
-
+    <div class='jdgm-widget jdgm-preview-badge center'>
+      {{ product.metafields.judgeme.badge }}
+    </div>
     <div class="price-container">
       <div class="product-price">Rs. {{ price }}</div>
       {% if compareAtPrice != blank %}

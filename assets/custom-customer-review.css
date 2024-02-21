@@ -9,7 +9,7 @@
     background-color: #d03c3f;
 }
 
-.ustom-customer-review .splide__arrow svg {
+.custom-customer-review .splide__arrow svg {
     z-index: 99;
 }
 
@@ -29,11 +29,7 @@
 
 
 .customer-profession {
-    color: rgba(var(--color-foreground), .8);
-    font-weight: 400;
-    margin: 0;
-    font-size: calc(var(--font-body-scale) * 14px);
-    word-break: break-word;
+    font-weight: 500;
 }
 
 
@@ -54,7 +50,7 @@
 }
 
 .customer-review-text .customer-comment {
-    font-size: 16px;
+    font-size: calc(var(--font-body-scale) * 16px);
     line-height: 22px;
     margin: 0;
     line-height: 20px;

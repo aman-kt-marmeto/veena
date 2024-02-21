@@ -53,6 +53,15 @@
 
 .collections-title {
     color: #fff;
+    transition: color .7s ease;
+}
+
+.text-button-container a {
+    text-decoration: none;
+}
+
+.text-button-container .collections-title:hover {
+    color: #d03c3f;
 }
 
 .text-button-container .collection-list-btn {

@@ -1,20 +1,19 @@
-{{ 'custom-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'custom-blog.css' | asset_url | stylesheet_tag }}
+
 
 {% liquid
   assign paddingTop = section.settings.padding_top
-  assign paddingBottom = section.setting.padding_bottom
+  assign paddingBottom = section.settings.padding_bottom
   assign heading = section.settings.heading
-  assign collectionList = section.settings.collection_list
-  assign colorScheme = section.settings.color_scheme
   assign headingSize = section.settings.heading_size
-  assign buttonLabel = section.settings.button_label
   assign sliderType = section.settings.slider_type
   assign pagination =section.settings.pagination
   assign perPage = section.settings.perPage
   assign autoplay = section.settings.autoplay
   assign arrows = section.settings.arrows
+  assign blocks = section.blocks
+  assign colorScheme = section.settings.color_scheme
 %}
-
 
 {% style %}
   @media screen and (min-width: 750px) {
@@ -29,42 +28,60 @@
   }
 {% endstyle %}
 
-<div class="custom-collection-list padding--{{section.id}} color--{{colorScheme.id}}">
+
+<div class="custom-blog padding--{{section.id}} color--{{colorScheme.id}}">
   <div class="page-width">
-    <div class="{{headingSize}} title-wrapper">{{ heading }}</div>
+    {% if heading != blank %}
+      <div class="{{headingSize}} title-wrapper">{{ heading }}</div>
+    {% endif %}
     <Custom-Splide>
-      <div class="splide">
+      <div class="splide custom-blog-slide-container">
         <div div class="splide__track">
           <ul class="splide__list">
-            {% for collection in collectionList %}
-              <li class="splide__slide">
-                <div class="slide-container">
-                  <div class="slide-image-container">
-                    {% if collection.featured_image != blank %}
-                      {% render 'responsive-picture'
-                        ,
- desktopImage: collection.featured_image
-                        ,
- mobileImage: collection.featured_image
-                        ,
- class: "media media--portrait"
-                      %}
-                    {% else %}
-                      {{ 'product-2' | placeholder_svg_tag }}
-                    {% endif %}
-                  </div>
-                  <div class="text-button-container">
-                    <a href="{{collection.url}}">
-                      <div class="h2 collections-title">{{ collection.title }}</div>
-                    </a>
-                    <div class="badge-button">
-                      <a href="{{collection.url}}" class="collection-list-btn quick-look-button">
-                        <span>{{ buttonLabel }}</span>
-                      </a>
+            {% for block in blocks %}
+              {% for article in block.settings.blog.articles %}
+                <li class="splide__slide">
+                  <div class="slide-container">
+                    <div class="custom-blog--image-wrapper">
+                      {% if article.image != blank %}
+                        {% render 'responsive-picture'
+                          , desktopImage: article.image
+                          , mobileImage: article.image
+                          , class: "media media--square"
+                        %}
+                      {% else %}
+                        {{ 'image' | placeholder_svg_tag }}
+                      {% endif %}
+                    </div>
+                    <div class="custom-text-content">
+                      <div class="text-upper">
+                        <div class="custom-blog__tags">
+                          {% for tag in article.tags %}
+                            <a href="{{block.settings.blog.url |  append: '/tagged/' |  append: tag }}">{{ tag }}</a>
+                          {% endfor %}
+                        </div>
+                        <div class="custom-blog__title">
+                          <a class="h3" href="{{article.url}}">{{ article.title }}</a>
+                        </div>
+                        <div class="custom-blog__author">
+                          Publish by: {{ article.author }}
+                        </div>
+                        <div class="custom-blog__excerpt">
+                          {{ article.excerpt_or_content | truncatewords: 15 }}
+                        </div>
+                      </div>
+                      <div class="custom-blog__published-date">
+                        <div class="custom-blog__read-more">
+                          <a href="{{article.url}}">Read more</a>
+                        </div>
+                        <div class="published-date">
+                          {{ article.published_at | date: '%B %d, %Y' }}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              {% endfor %}
             {% endfor %}
           </ul>
         </div>
@@ -79,7 +96,8 @@
            "pagination": {{pagination}},
            "breakpoints":{
             "640": {
-        			"perPage": 2
+        			"perPage": 1,
+                    "destroy":true
               }
               },
               "type": "{{sliderType}}"
@@ -92,19 +110,19 @@
 
 {% schema %}
   {
-    "name": "Custom collections list",
+    "name": "Custom blog",
     "tag": "section",
     "class": "section",
     "settings": [
       {
         "type": "header",
-        "content": "Collection"
+        "content": "Custom blog"
       },
       {
         "type": "text",
         "id": "heading",
         "label": "Heading",
-        "default": "Captivating Collections"
+        "default": "Let You Know"
       },
       {
         "type": "select",
@@ -125,15 +143,6 @@
         "label": "Heading Size"
       },
       {
-        "type": "text",
-        "id": "button_label",
-        "label": "Button Label",
-        "default": "Shop Now"
-      }, {
-        "type": "collection_list",
-        "id": "collection_list",
-        "label": "Collections"
-      }, {
         "type": "header",
         "content": "Slider Settings"
       }, {
@@ -222,7 +231,7 @@
         "step": 1,
         "unit": "px",
         "label": "Padding top",
-        "default": 30
+        "default": 60
       }, {
         "type": "range",
         "id": "padding_bottom",
@@ -231,12 +240,25 @@
         "step": 1,
         "unit": "px",
         "label": "Padding bottom",
-        "default": 30
+        "default": 60
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Blog",
+        "type": "blog",
+        "settings": [
+          {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blogs"
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "Custom collections list"
+        "name": "Custom blog"
       }
     ]
   }

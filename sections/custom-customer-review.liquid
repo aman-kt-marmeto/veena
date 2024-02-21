@@ -8,7 +8,6 @@
   assign sliderType = section.settings.slider_type
   assign pagination =section.settings.pagination
   assign perPage = section.settings.perPage
-  assign speed = section.settings.speed
   assign autoplay = section.settings.autoplay
   assign arrows = section.settings.arrows
   assign blocks = section.blocks
@@ -46,12 +45,9 @@
                     <div class="slide-image-container">
                       {% if block.settings.profile_picture != blank %}
                         {% render 'responsive-picture'
-                          ,
- desktopImage: block.settings.profile_picture
-                          ,
- mobileImage: collection.featured_image
-                          ,
- class: "media media--circle"
+                          , desktopImage: block.settings.profile_picture
+                          , mobileImage: collection.featured_image
+                          , class: "media media--circle"
                         %}
                       {% else %}
 
@@ -71,10 +67,19 @@
       </div>
       <script id="splideProperties">
         {
-          "autoplay": false,
-          "perPage": 3,
-           "gap": "2rem"
-        }
+          "autoplay": {{ autoplay }},
+          "perPage": {{perPage}},
+          "arrows": {{ arrows }},
+           "gap": "{{ section.settings.gap |  append: 'rem'}}",
+           "rewind": {{ section.settings.rewind }},
+           "pagination": {{pagination}},
+           "breakpoints":{
+            "640": {
+        			"perPage": 1
+              }
+              },
+              "type": "{{sliderType}}"
+          }
       </script>
     </Custom-Splide>
   </div>
