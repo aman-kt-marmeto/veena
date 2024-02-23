@@ -23,11 +23,9 @@
 }
 
 /* Hover, active, and focus states */
-:is(
-    .visual-display-parent:hover .visual-display--presentation-swatch,
-    .visual-display-parent.active .visual-display--presentation-swatch,
-    .visual-display-parent:has(:focus-visible) .visual-display--presentation-swatch
-  ) {
+:is(.visual-display-parent:hover .visual-display--presentation-swatch,
+  .visual-display-parent.active .visual-display--presentation-swatch,
+  .visual-display-parent:has(:focus-visible) .visual-display--presentation-swatch) {
   outline-style: solid;
 }
 
@@ -87,4 +85,53 @@
 
 .visual-display--presentation-swatch .visual-display__image {
   object-fit: cover;
+}
+
+.facets__list--vertical {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.facets-swatch-box {
+  position: relative;
+  display: block !important;
+  min-height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  padding: 2px;
+}
+
+
+.facets-swatch-box::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.check-swatch-box--hidden {
+  display: none;
+}
+
+
+.facets-swatch-custom input:checked+.facets-swatch-box::before {
+  border-color: #fff;
+}
+
+.facets-swatch-box:hover::before {
+  border-color: #fff;
+}
+
+
+.swatch--center label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
 }

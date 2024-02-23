@@ -54,7 +54,7 @@
     padding: 2px;
 }
 
-.varient-option {
+.varient-option form {
     padding-top: 20px;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@
     gap: 10px;
 }
 
-.varient-option label[checked] {
+.varient-option form label[checked] {
     color: #ff8c8c;
 }
 

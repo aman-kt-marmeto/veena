@@ -203,15 +203,19 @@
                               endif
                             %}
 
-                            <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                            <li class="item-swatch swatch--center list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               <label
                                 for="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
-                                class="facets__label facet-checkbox{% if is_disabled %} facet-checkbox--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
+                                class="facets__label facets-swatch-custom facet-checkbox{% if is_disabled %} facet-checkbox--disabled disabled{% endif %}{% if has_visual_display %} visual-display-parent visual-display-parent--{{ filter.presentation }}{% endif %}{% if value.active %} active{% endif %}"
                               >
+                              
                                 <input
                                   type="checkbox"
                                   name="{{ value.param_name }}"
                                   value="{{ value.value }}"
+                                  class="{% if filter.param_name contains 'color' %} 
+                                  check-swatch-box--hidden
+                                  {% endif %}"
                                   id="Filter-{{ filter.param_name | escape }}-{{ forloop.index }}"
                                   {% if value.active %}
                                     checked
@@ -220,8 +224,11 @@
                                     disabled
                                   {% endif %}
                                 >
+                                {% if filter.param_name contains 'color' %} 
+                                  <div class="facets-swatch-box" data-value="{{ value.value }}"></div>
+                                {% endif %}
 
-                                {% if has_visual_display %}
+                                {% if false %}
                                   <div class="facets__visual-display-wrapper">
                                     {% render 'visual-display',
                                       type: value.display.type,
@@ -230,6 +237,7 @@
                                     %}
                                   </div>
                                 {% else %}
+                                {% unless filter.param_name  contains 'color' %} 
                                   <svg
                                     width="1.6rem"
                                     height="1.6rem"
@@ -255,10 +263,11 @@
                                       stroke-linecap="round"
                                       stroke-linejoin="round" />
                                   </svg>
+                                {% endunless %}
                                 {% endif %}
 
-                                <span class="facet-checkbox__text" aria-hidden="true">
-                                  {{- value.label | escape }} ({{ value.count }})</span
+                                <div class="facet-checkbox__text" aria-hidden="true">
+                                  {{- value.label | escape }} ({{ value.count }})</div
                                 >
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
@@ -268,15 +277,16 @@
                                     {{- 'products.facets.product_count_simple.other' | t: count: value.count -}}
                                   {%- endif -%}
                                   )</span
-                                >
+                                > 
                               </label>
                             </li>
                           {%- endfor -%}
                         </ul>
                         {% comment %} No show more for no JS {% endcomment %}
                         <ul
-                          class="{% if filter_type != 'vertical' %} facets__list{% endif %} no-js-list list-unstyled no-js"
+                          class="{% if filter_type != 'vertical' %} facets__list{% endif %} no-js-list list-unstyled no-js item-swatch"
                           role="list"
+                          
                         >
                           {%- for value in filter.values -%}
                             <li class="list-menu__item facets__item">

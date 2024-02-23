@@ -10,6 +10,7 @@
   assign compareAtPrice = current_varient.compare_at_price | money_without_currency
   assign inventoryQuantity = current_varient.inventory_quantity
   assign discountPercentage = compareAtPrice | minus: price | times: 100 | divided_by: compareAtPrice | round: 2
+  assign minusValue = compareAtPrice | minus: price
   for tag in product.tags
     if tag contains 'tag-'
       assign myTag = tag | split: 'tag-'
@@ -57,7 +58,7 @@
           {% if myTag != blank %}
             <div class="product-tag">{{ myTag }}</div>
           {% endif %}
-          {% if discountPercentage != blank %}
+          {% if discountPercentage > 0 %}
             <div class="discount-price">
               {{ discountPercentage }}% 0ff
             </div>
@@ -72,38 +73,61 @@
     </div>
 
     <div class="varient-option item-swatch">
-      {% for varient in product.variants %}
-        <span href="{{varient.url}}" class="varient-container">
-          <div class="swatches center">
-            <label
-              for="{{varient.id}}"
-              {% if varient.id == current_varient.id %}
-              aria-selected="true"
-              checked
-              {% endif %}>
-              <input
-                type="radio"
-                hidden
-                name="{{product.handle |  handleize}}"
-                id="{{varient.id}}"
-                {% if varient.id == current_varient.id %}
-                aria-selected="true"
-                checked
-                {% endif %}>
-              <div class="swatch-box" data-value="{{varient.title}}"></div>
-            </label>
-            <label
-              class="swatches-name"
-              for="{{varient.id}}"
-              {% if varient.id == current_varient.id %}
-              aria-selected="true"
-              checked
-              {% endif %}>
-              {{ varient.title }}
-            </label>
-          </div>
-        </span>
-      {% endfor %}
+      {% form 'product'
+        , product %}
+        <input
+          type="hidden"
+          name="id"
+          id="{{current_varient.id}}" />
+        {% unless product.has_only_default_variant %}
+          {% for product_option in product.options_with_values %}
+            {% assign optionName = product_option.name | handleize %}
+            {% if optionName contains 'color' %}
+              {% for varient in product_option.values %}
+                {% assign varient_handleize = varient | handleize %}
+                <span href="{{product.url}}" class="varient-container">
+                  <div class="swatches center">
+                    <label
+                      for="{{varient_handleize}}"
+                      {% if product_option.selected_value contains varient %}
+                      aria-selected="true"
+                      checked
+                      {% endif %}>
+                      <input
+                        hidden
+                        type="radio"
+                        name="{{product.handle}}"
+                        id="{{varient_handleize}}"
+                        {% if product_option.selected_value contains varient %}
+                        aria-selected="true"
+                        checked
+                        {% endif %}>
+                      <div class="swatch-box" data-value="{{varient}}"></div>
+                    </label>
+                    <label class="swatches-name" for="{{varient_handleize}}">
+                      {{ varient }}
+                    </label>
+                  </div>
+                </span>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+
+          {% unless product.options_with_values contains 'Color' %}
+            {% for product_option in product.options_with_values %}
+              {% for varients in product_option %}
+                <span href="{{product.url}}" class="varient-container">
+                  <div class="swatches center">
+                    {{ varient }}
+                  </div>
+                </span>
+              {% endfor %}
+            {% endfor %}
+          {% endunless %}
+
+        {% endunless %}
+      {% endform %}
+
     </div>
     <div class="vendor-name center">
       {{ product.vendor }}
