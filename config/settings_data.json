@@ -75,7 +75,7 @@
     "text_boxes_shadow_blur": 5,
     "media_border_thickness": 1,
     "media_border_opacity": 5,
-    "media_radius": 0,
+    "media_radius": 16,
     "media_shadow_opacity": 0,
     "media_shadow_horizontal_offset": 0,
     "media_shadow_vertical_offset": 4,
@@ -182,6 +182,55 @@
               "title": "Deep Sky Blue",
               "color_code": "#00bfff"
             }
+          },
+          "color_settings_6y6Xdy": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "Navy",
+              "color_code": "#334fb4"
+            }
+          },
+          "color_settings_UrEyUU": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "white",
+              "color_code": "#dfdfdf"
+            }
+          },
+          "color_settings_GFibRf": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "LightGray",
+              "color_code": "#c4c4c4"
+            }
+          },
+          "color_settings_yTma4K": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "SaddleBrown",
+              "color_code": "#fd921b"
+            }
+          },
+          "color_settings_bwedEx": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "IndianRed",
+              "color_code": "#ff6e6e"
+            }
+          },
+          "color_settings_PqTtLb": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "DarkGreen",
+              "color_code": "#205e00"
+            }
+          },
+          "color_settings_XGfHfV": {
+            "type": "colorSettings",
+            "settings": {
+              "title": "pink",
+              "color_code": "#ff7a7a"
+            }
           }
         },
         "block_order": [
@@ -191,7 +240,14 @@
           "color_settings_8GhXQH",
           "color_settings_die3bq",
           "color_settings_bWWDQi",
-          "color_settings_Kf4CT6"
+          "color_settings_Kf4CT6",
+          "color_settings_6y6Xdy",
+          "color_settings_UrEyUU",
+          "color_settings_GFibRf",
+          "color_settings_yTma4K",
+          "color_settings_bwedEx",
+          "color_settings_PqTtLb",
+          "color_settings_XGfHfV"
         ],
         "settings": {
         }
@@ -255,7 +311,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#d03c3f",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",

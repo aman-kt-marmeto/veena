@@ -40,7 +40,7 @@
               {{- option.selected_value -}}
             </span>
           </legend>
-          <div class="grid">
+          <div class="swatch-flex">
             {% render 'product-variant-options'
               , product: product
               , option: option
@@ -54,7 +54,7 @@
           <legend class="form__label">{{ option.name }}:
             <span id="varientSelectedValue">{{ option.selected_value }}</span>
           </legend>
-          <div class="grid">
+          <div class="swatch-flex">
             {% render 'product-variant-options'
               , product: product
               , option: option

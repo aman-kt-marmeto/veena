@@ -1121,6 +1121,18 @@ class VariantSelects extends HTMLElement {
         document.querySelector("#product-meta-content").innerHTML = html.querySelector("#product-meta-content").innerHTML
 
 
+        document.querySelector("#varientSelectedValue").innerHTML = html.querySelector("#varientSelectedValue").innerHTML
+
+        const buttonText = html.querySelector("#cart-button__price").innerHTML
+        console.log(typeof buttonText)
+        console.log(buttonText.includes('sold'))
+        if (!buttonText.includes('Sold')) {
+          document.querySelector("#cart-button__price").innerHTML = html.querySelector("#cart-button__price").innerHTML
+        }
+
+
+        document.querySelector("#cart-button__price").dataset.price = html.querySelector("#cart-button__price").dataset.price
+
         const source = html.getElementById(
           `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );

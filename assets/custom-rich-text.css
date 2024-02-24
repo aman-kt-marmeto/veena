@@ -33,3 +33,12 @@
     .rich-text__wrapper--right {
         justify-content: flex-start;
     }
+
+    .rich-text__button-wrapper .button {
+        background-color: #d03c3f;
+
+    }
+
+    .rich-text__button-wrapper .button::after {
+        background-color: #000;
+    }
