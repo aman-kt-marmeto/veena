@@ -1,21 +1,11 @@
      .custom-image-grid .image-container {
          position: relative;
-         width: 100%;
-         height: auto;
-         padding-bottom: 50%;
-         min-height: 250px;
      }
 
 
      .custom-image-grid .image-container img {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         top: 0;
-         left: 0;
+         display: block;
          transition: all .2s;
-         min-height: 35rem;
-         object-fit: cover;
      }
 
      .custom-image-grid .grid-item__text {
@@ -86,7 +76,7 @@
 
      .custom-image-grid .grid__item:hover {
          img {
-             transform: scale(1.05);
+             transform: scale(1.04);
          }
      }
 

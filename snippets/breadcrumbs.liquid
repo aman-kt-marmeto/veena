@@ -1,4 +1,3 @@
-
 {% style %}
   .breadcrumbs__list {
     margin: 0;
@@ -12,7 +11,7 @@
   }
 
   .breadcrumbs__listitem:not(:first-child)::before {
-    content: '/';
+    content: '>';
     padding: 0 8px;
   }
 
@@ -29,16 +28,25 @@
 {%- unless template == 'index' or template == 'cart' or template == '404' -%}
   {%- assign template_name = template | split: '.' | first -%}
 
-  <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+  <nav
+    class="breadcrumbs"
+    role="navigation"
+    aria-label="breadcrumbs">
     <ol class="breadcrumbs__list">
       <li class="breadcrumbs__listitem">
-        <a class="breadcrumbs__link" href="{{ routes.root_url }}" title="Home">Home</a>
+        <a
+          class="breadcrumbs__link"
+          href="{{ routes.root_url }}"
+          title="Home">Home</a>
       </li>
 
       {%- case template_name -%}
         {%- when 'collection' and collection.handle -%}
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ collection.url }}"
+              aria-current="page">{{ collection.title }}</a>
           </li>
         {%- when 'product' -%}
           {%- if collection and collection.url -%}
@@ -48,26 +56,44 @@
           {%- endif -%}
 
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ product.url }}"
+              aria-current="page">{{ product.title }}</a>
           </li>
         {%- when 'blog' -%}
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ blog.url }}"
+              aria-current="page">{{ blog.title }}</a>
           </li>
         {%- when 'article' -%}
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ blog.url }}"
+              aria-current="page">{{ blog.title }}</a>
           </li>
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ article.url }}"
+              aria-current="page">{{ article.title }}</a>
           </li>
         {%- when 'page' -%}
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ page.url }}"
+              aria-current="page">{{ page.title }}</a>
           </li>
         {%- else -%}
           <li class="breadcrumbs__listitem">
-            <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+            <a
+              class="breadcrumbs__link"
+              href="{{ request.path }}"
+              aria-current="page">{{ page_title }}</a>
           </li>
       {%- endcase -%}
     </ol>

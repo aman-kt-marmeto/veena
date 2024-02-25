@@ -1,0 +1,8 @@
+.custom-usp__wrapper .svg {
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.custom-usp__wrapper .svg:hover {
+    transform: rotateY(180deg);
+}

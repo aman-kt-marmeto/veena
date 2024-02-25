@@ -2,7 +2,7 @@
 
 {% liquid
   assign paddingTop = section.settings.padding_top
-  assign paddingBottom = section.setting.padding_bottom
+  assign paddingBottom = section.settings.padding_bottom
   assign heading = section.settings.heading
   assign collectionList = section.settings.collection_list
   assign colorScheme = section.settings.color_scheme
@@ -19,13 +19,13 @@
 {% style %}
   @media screen and (min-width: 750px) {
     .padding--{{ section.id }} {
-      padding-top: {{ paddingTop }}px;
-      padding-bottom: {{ paddingBottom }}px;
+      padding-top: {{- paddingTop  | divided_by:2 -}}px;
+      padding-bottom: {{- paddingBottom |  divided_by:2 -}}px;
     }
   }
   .padding--{{ section.id }} {
-    padding-top: {{ paddingTop | divided_by:2 }}px;
-    padding-bottom: {{ paddingBottom |  divided_by: 2 }}px;
+    padding-top: {{ paddingTop }}px;
+    padding-bottom: {{ paddingBottom }}px;
   }
 {% endstyle %}
 

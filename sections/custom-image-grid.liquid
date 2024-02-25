@@ -1,5 +1,7 @@
 {{ 'custom-image-grid.css' | asset_url | stylesheet_tag }}
 
+{% assign media_option = "media " | append: section.settings.media_option %}
+
 {% style %}
   @media screen and (min-width: 750px) {
     .padding--{{ section.id }} {
@@ -14,18 +16,15 @@
 {% endstyle %}
 
 <div class="custom-image-grid padding--{{section.id}} padding--{{section.id}}">
-  <div class="{% unless section.settings.full_width %} page-width {% endunless %}">
-    <div class="grid grid--1-col grid--2-col-desktop">
+  <div class="page-width">
+    <div class="grid grid--1-col grid--{{section.settings.desktop_col}}-col-desktop {%if section.settings.desktop_col == 2 %} grid--{{section.settings.desktop_col}}-col-tablet{%endif%}">
       {% for block in section.blocks %}
         <div class="grid__item grid__item--relative grid__item--radius">
           <div class="image-container">
             {% render 'responsive-picture'
-              ,
- desktopImage: block.settings.desktop_image
-              ,
- mobileImage: block.settings.mobileImage
-              ,
-            %}
+              , desktopImage: block.settings.desktop_image
+              , mobileImage: block.settings.mobileImage
+              , class: media_option %}
           </div>
           <div class="grid-item__text grid grid-item__text--absolute grid-item--{{block.settings.content_position}} color-{{block.settings.color_scheme.id}}">
             <div class="{{block.settings.content_alignment}}">
@@ -66,10 +65,30 @@
     "tag": "section",
     "settings": [
       {
-        "type": "checkbox",
-        "label": "Make section full width",
-        "default": false,
-        "id": "full_width"
+        "type": "select",
+        "label": "Media shape",
+        "default": "media--square",
+        "id": "media_option",
+        "options": [
+          {
+            "value": "media--square",
+            "label": "Square"
+          }, {
+            "value": "media--portrait",
+            "label": "Portrait"
+          }, {
+            "value": "media--landscape",
+            "label": "Landscape"
+          }
+        ]
+      }, {
+        "type": "range",
+        "label": "Number of column (Desktop)",
+        "id": "desktop_col",
+        "default": 2,
+        "min": 1,
+        "max": 4,
+        "step": 1
       }, {
         "type": "range",
         "label": "Padding top",
