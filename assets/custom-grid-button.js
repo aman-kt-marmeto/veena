@@ -1,10 +1,14 @@
 class customGridButton extends HTMLElement {
     constructor() {
         super();
-        this.addEventListener('change', () => {
-            this.inputClicked = this.querySelector('input[type="radio"]:checked')
-            this.gridCount = Number(this.inputClicked.dataset.number)
-            console.log(this.gridCount)
+        this.addEventListener('click', (e) => {
+            const colCount = e.target.dataset.column
+            const productGrid = document.querySelector("#product-grid")
+            productGrid.classList.forEach(function (className) {
+                if (className.endsWith('desktop')) {
+                    productGrid.classList.replace(className, `grid--${colCount}-col-desktop`);
+                }
+            });
         })
     } s
 

@@ -110,6 +110,19 @@
                   </h2>
                 </a>
               </div>
+            {%- when 'payment' -%}
+              <div class="payment__svg">
+              {%- unless shop.enabled_payment_types == empty -%}
+              <strong class="">Secure checkout with</strong>
+              <ul class="list list-payment" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class="list-payment__item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+              {% endunless %}
+            </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -136,7 +149,7 @@
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                   <div class="line-item">
-                    <input type="text" name="properties[_Monogram]"  value="My name">
+                    <input type="text" name="properties[_Monogram]"  value="Myname">
                   <input type="submit" value="Add to cart">
                   </div>
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -737,6 +750,11 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
+    },
+    {
+      "type":"payment",
+      "name":"Payment",
+      "limit":1
     },
     {
       "type": "price",

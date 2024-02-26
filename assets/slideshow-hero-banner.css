@@ -51,6 +51,7 @@ ul {
     background-color: #ffefef57;
     width: max-content;
     padding: 0 5% 0 0;
+    margin-bottom: 1rem;
 }
 
 .slideshow-hero .splide__slide {
@@ -126,11 +127,25 @@ ul {
 .slideshow-hero .splide__arrow--next {
     top: unset;
     transform: unset;
-    bottom: 4px;
     background: transparent;
     fill: #fff;
 }
 
+.slideshow-hero .splide__arrow {
+    height: unset;
+    width: unset;
+    bottom: 0.8em;
+}
+
+.slideshow__heading {
+    font-size: 40px;
+    line-height: normal;
+}
+
+
+.slideshow__button {
+    margin-top: 3rem;
+}
 
 
 

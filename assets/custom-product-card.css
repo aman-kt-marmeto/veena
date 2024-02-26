@@ -172,9 +172,13 @@
     font-size: calc(var(--font-body-scale) * 14px);
     letter-spacing: 0;
     font-weight: var(--font-body-weight-medium);
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 .product-badge-container .quick-look-button span {
+    line-height: 25.2px;
     z-index: 99;
 }
 

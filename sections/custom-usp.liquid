@@ -21,6 +21,12 @@
     padding: 20px 0;
   }
 
+  .ups-item__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000;
+  }
+
   .custom-usp .grid__item > * {
     margin: 0;
     padding: 0;
@@ -29,6 +35,11 @@
     font-size: calc(var(--font-body-scale) * 14px);
     line-height: normal;
     color: rgba(var(--color-foreground), 0.6);
+  }
+
+  .usp-item__description {
+    font-size: 20px;
+    line-height: normal;
   }
 {% endstyle %}
 
@@ -44,8 +55,8 @@
             {% else %}
               {{ 'product-1' | placeholder_svg_tag }}
             {% endif %}
-            <div class="h2 icon-heading">{{ block.settings.heading }}</div>
-            <div class="h4 icon-description">{{ block.settings.description }}</div>
+            <div class="ups-item__heading icon-heading">{{ block.settings.heading }}</div>
+            <div class="usp-item__description icon-description">{{ block.settings.description }}</div>
           </div>
         {% endfor %}
       </div>

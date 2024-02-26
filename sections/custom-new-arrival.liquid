@@ -1,5 +1,4 @@
 {{ 'custom-new-arrival.css' | asset_url | stylesheet_tag }}
-
 {% style %}
   .padding-{{ section.id }} {
     padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
@@ -15,22 +14,22 @@
 {% endstyle %}
 
 {% capture BannerSlider %}
-  {
-      "autoplay": {{ section.settings.autoplay }},
-      "arrows": {{ section.settings.arrows }},
-      "pagination": {{ section.settings.pagination }},
-      "perPage": {{ section.settings.perPage }},
-      "breakpoints":{
-        "640": {
-			"perPage": 2
-      }
-      },
-      "speed": {{ section.settings.speed |  append: '000'}},
-      "type": "{{ section.settings.slider_type }}",
-      "interval":{{ section.settings.interval | append :'000' }},
-      "rewind":{{ section.settings.rewind }},
-      "gap":"{{ section.settings.gap |  append: 'rem'}}"
-  }
+{
+    "autoplay": {{ section.settings.autoplay }},
+    "arrows": {{ section.settings.arrows }},
+    "pagination": {{ section.settings.pagination }},
+    "perPage": {{ section.settings.perPage }},
+    "breakpoints":{
+    "640": {
+    "perPage": 2
+    }
+    },
+    "speed": {{ section.settings.speed |  append: '000'}},
+    "type": "{{ section.settings.slider_type }}",
+    "interval":{{ section.settings.interval | append :'000' }},
+    "rewind":{{ section.settings.rewind }},
+    "gap":"{{ section.settings.gap |  append: 'rem'}}"
+}
 {% endcapture %}
 
 <div class="collection-wrapper padding-{{ section.id }}  color-{{ section.settings.color_scheme }}">
@@ -54,16 +53,19 @@
           {% if section.settings.banner_desktop_image != blank %}
             <div class="main-container__banner-image">
               {% render 'responsive-picture'
+ 
                 , desktopImage: section.settings.banner_desktop_image
+ 
                 , 
  mobileImage: section.settings.banner_mobile_image
+ 
                 , 
- class: " media media--portrait
-                                                                                                                                                                                            media--transparent" %}
+ class: " media media--portrait media--transparent" %}
             </div>
           {% endif %}
           <div class="main-container__banner-content">
             {% render 'custom-caption'
+ 
               , caption: section.settings.pre_heading %}
             <h2 class="h3">
               {{ section.settings.banner_heading }}
@@ -80,15 +82,19 @@
           {% if section.settings.banner_desktop_image != blank %}
             <div class="main-container__mobile-banner-image">
               {% render 'responsive-picture'
+ 
                 , desktopImage: section.settings.banner_desktop_image
+ 
                 , 
  mobileImage: section.settings.banner_mobile_image
+ 
                 , 
  class: " " %}
             </div>
           {% endif %}
           <div class="main-container__mobile-banner-content">
             {% render 'custom-caption'
+ 
               , caption: section.settings.pre_heading %}
             <h2 class="h3">
               {{ section.settings.banner_heading }}

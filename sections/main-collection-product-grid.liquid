@@ -1,7 +1,7 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-<script src="{{custom-grid-button.js |  asset_url}}" defer></script>
+<script src="{{'custom-grid-button.js' |  asset_url}}" defer></script>
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -107,24 +107,21 @@
           %}
         </aside>
       {%- endif -%}
-      <div>
+      <div style="flex-grow: 1;">
         {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
           <facet-filters-form class="facets facets-vertical-sort  small-hide no-js-hidden">
             <form class="facets-vertical-form" id="FacetSortForm">
               <custom-grid-button>
               <div class="button--flex">
-                <label for="grid-4">
-                <input type="hidden" name="gridButton" id="grid-4" data-number="4">  
-                {% render 'icon-button-grid-4' %}
-                </label>
-                <label >
-                  <input type="hidden" name="gridButton" id="grid-3" data-number="3">
-                  {% render 'icon-button-grid-3' %}
-                  </label>
-                <label for="grid-2">
-                  <input type="hidden" name="gridButton" id="grid-2" data-number="2">
-                  {% render 'icon-button-grid-2' %}
-                  </label>
+                <div class="grid-button" >
+                    <div data-column="4">{% render 'icon-button-grid-4' %}</div>
+                </div>
+                <div class="grid-button" > 
+                    <div class="aman" data-column="3">{% render 'icon-button-grid-3' %}</div>
+                  </div>
+                <div class="grid-button" data-col-count="2">
+                    <div data-column="2">{% render 'icon-button-grid-2' %}</div>
+                  </div>
               </div>
               </custom-grid-button>
               <div class="facet-filters sorting caption">

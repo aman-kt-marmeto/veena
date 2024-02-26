@@ -3533,3 +3533,34 @@ details-disclosure>details {
     /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+
+.splide__arrow {
+  height: 4.4rem;
+  width: 4.4rem;
+  opacity: 1;
+  background-color: #d03c3f;
+  background: radial-gradient(ellipse, #D03C3F 50%, black 50%);
+  background-size: 700% 450%;
+  background-position: right;
+  transition: all 1s ease-out;
+}
+
+.splide__arrow:hover {
+  background-position: center;
+  background-size: 150% 300%;
+}
+
+.splide__arrow[disabled] {
+  visibility: hidden;
+}
+
+.splide__arrow--next {
+  border-radius: 50% 0% 0% 50%;
+  right: 0;
+}
+
+.splide__arrow--prev {
+  border-radius: 0% 50% 50% 0%;
+  left: 0;
+}

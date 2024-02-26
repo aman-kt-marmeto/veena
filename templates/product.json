@@ -49,6 +49,26 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "icon_with_text_mRk6L4": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/1.png",
+            "heading_1": "Daily deals",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/2.jpg",
+            "heading_2": "Return policy",
+            "icon_3": "clipboard",
+            "image_3": "shopify:\/\/shop_images\/3_1.jpg",
+            "heading_3": "secure payment"
+          }
+        },
+        "payment_Jf9zNz": {
+          "type": "payment",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -59,7 +79,9 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "icon_with_text_mRk6L4",
+        "payment_Jf9zNz"
       ],
       "settings": {
         "enable_sticky_info": true,

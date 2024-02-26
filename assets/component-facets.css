@@ -1102,13 +1102,7 @@ input.mobile-facets__checkbox {
     gap: 10px;
   }
 
-  .button--flex>label {
-    min-width: 45px;
-    min-height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 
   .product-count-vertical {
     margin-left: 3.5rem;
@@ -1255,4 +1249,25 @@ input.mobile-facets__checkbox {
 .parent a {
   text-decoration: none;
   color: #000;
+}
+
+
+.button--flex>div {
+  min-width: 45px;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+custom-grid-button {
+  display: flex;
+  align-items: center;
+}
+
+.grid-button div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
 }

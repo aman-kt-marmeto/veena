@@ -1,7 +1,3 @@
-{{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
-<script src="{{'custom-product-card.js' |  asset_url}}" defer></script>
-{{ 'custom-product-card.css' | asset_url | stylesheet_tag }}
-<script src="{{'custom-product-card.js' |  asset_url}}" defer></script>
 {% liquid
   assign current_varient = product.selected_or_first_available_variant
   assign featured_image = current_varient.image | default: product.featured_image
@@ -108,9 +104,6 @@
                         checked
                         {% endif %}>
                       <div class="swatch-box" data-value="{{varient}}"></div>
-                    </label>
-                    <label class="swatches-name" for="{{varient_handleize}}">
-                      {{ varient }}
                     </label>
                   </div>
                 </span>
