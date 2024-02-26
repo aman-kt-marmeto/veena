@@ -10,6 +10,7 @@
   assign compareAtPrice = current_varient.compare_at_price | money_without_currency
   assign inventoryQuantity = current_varient.inventory_quantity
   assign discountPercentage = compareAtPrice | minus: price | times: 100 | divided_by: compareAtPrice | round: 2
+  assign formId = 'product_form_' | append: current_varient.id
   for tag in product.tags
     if tag contains 'tag-'
       assign myTag = tag | split: 'tag-'
@@ -30,26 +31,28 @@
   data-product-url="{{product.url}}">
   <div class="product-card-container">
     <div class="product-card-image-container">
-      <div class="primary-image">
-        {% render 'responsive-picture'
-          , 
+      <a href="{{product.url}}">
+        <div class="primary-image">
+          {% render 'responsive-picture'
+            , 
  desktopImage: featured_image
-          , 
+            , 
  mobile_image: featured_image
-          , 
+            , 
  class: "meadia media--portrait"
-        %}
-      </div>
-      <div class="secondary-image">
-        {% render 'responsive-picture'
-          , 
+          %}
+        </div>
+        <div class="secondary-image">
+          {% render 'responsive-picture'
+            , 
  desktopImage: secondary_image
-          , 
+            , 
  mobile_image: secondary_image
-          , 
+            , 
  class: "meadia media--portrait"
-        %}
-      </div>
+          %}
+        </div>
+      </a>
       <div class="product-badge-container">
         <div class="product-badge">
           {% if myTag != blank %}
@@ -62,19 +65,24 @@
           {% endif %}
         </div>
         <div class="badge-button">
-          <a class="quick-look-button">
-            <span>Quick Look</span>
-          </a>
+          <button
+            type="submit"
+            form={{ formId }}
+            class="quick-look-button">
+            <span>Add to cart</span>
+          </button>
         </div>
       </div>
     </div>
     <div class="varient-option item-swatch">
-      {% form 'product'
-        , product %}
+      {%- form 'product'
+        , product
+        , id: formId
+      -%}
         <input
           type="hidden"
           name="id"
-          id="{{current_varient.id}}" />
+          value="{{ current_varient.id }}">
         {% unless product.has_only_default_variant %}
           {% for product_option in product.options_with_values %}
             {% assign optionName = product_option.name | handleize %}
