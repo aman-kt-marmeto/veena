@@ -270,6 +270,18 @@
         "padding_bottom": 60
       }
     },
+    "custom_timmer_x7dtPA": {
+      "type": "custom-timmer",
+      "settings": {
+        "heading": "Our Women's Clothing Collection.",
+        "description": "<p>where fashion meets flair, and every statement.<\/p>",
+        "button_label": "View All",
+        "button_link": "",
+        "text_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_featured_collection_GFQNyn": {
       "type": "custom-featured-collection",
       "settings": {
@@ -591,6 +603,61 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_faq_6TNhax": {
+      "type": "custom-Faq",
+      "blocks": {
+        "accordian_9HwbLx": {
+          "type": "Accordian",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "Once your order has been processed and shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status and location of your package through our shipping carrier's website."
+          }
+        },
+        "accordian_Ct4xEg": {
+          "type": "Accordian",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "We offer a hassle-free return policy. If you're not completely satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please visit our Returns & Exchanges page for more details on the process and any eligibility criteria."
+          }
+        },
+        "accordian_nkfmbJ": {
+          "type": "Accordian",
+          "settings": {
+            "question": "Are the product images accurate representations of the items?",
+            "answer": "Yes, we strive to provide accurate and high-quality images of our products. However, please note that colors may vary slightly due to differences in monitor settings. If you have any specific questions about a product, feel free to contact our customer support team."
+          }
+        },
+        "accordian_eAjpqY": {
+          "type": "Accordian",
+          "settings": {
+            "question": "How do I determine my size?",
+            "answer": "To find the right size, please refer to our detailed size guide available on each product page. Measurements may vary by product, so it's essential to check the specific sizing information provided. If you have further questions or need assistance, our customer support team is here to help."
+          }
+        },
+        "accordian_Cqtj9U": {
+          "type": "Accordian",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "We accept a variety of payment methods, including major credit cards (Visa, MasterCard, American Express), PayPal, and other secure payment options. During the checkout process, you can choose the payment method that suits you best."
+          }
+        }
+      },
+      "block_order": [
+        "accordian_9HwbLx",
+        "accordian_Ct4xEg",
+        "accordian_nkfmbJ",
+        "accordian_eAjpqY",
+        "accordian_Cqtj9U"
+      ],
+      "settings": {
+        "background_color": "#F5F5F5",
+        "heading": "FAQ",
+        "description": "Ensure that your FAQs are regularly updated based on common customer queries and changes in your business operations.",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "color_scheme": ""
+      }
     }
   },
   "order": [
@@ -600,12 +667,14 @@
     "custom_collection_list_E6NTBk",
     "custon_text_slider_AwhdaK",
     "custom_image_grid_a7UXRc",
+    "custom_timmer_x7dtPA",
     "custom_featured_collection_GFQNyn",
     "custom_usp_7nLFLm",
     "custom_lookbook_GTeN8Y",
     "custom_logo_slide_UXYcWc",
     "custom_image_grid_x9eVJq",
     "custom_customer_review_d6HpjX",
-    "custom_blog_RdUhjD"
+    "custom_blog_RdUhjD",
+    "custom_faq_6TNhax"
   ]
 }

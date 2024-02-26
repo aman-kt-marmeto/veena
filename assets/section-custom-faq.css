@@ -1,0 +1,88 @@
+.collapsible-content__questions {
+    position: relative;
+}
+
+.h3.collapsible-content__heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 44.2px;
+}
+
+.collapsible-content__summary {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.5rem;
+    padding-left: 0;
+    letter-spacing: 0.3px;
+    line-height: 20.8px;
+}
+
+.collapsible-content__index {
+    padding: 1.5rem;
+    padding-left: 0;
+}
+
+.collapsible-content__details summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapsible-content__details details[open] summary:after {
+    content: "-";
+}
+
+.collapsible-content__details summary:after {
+    content: "+";
+    font-size: 25px;
+    position: absolute;
+    margin-bottom: 5px;
+    right: 0;
+}
+
+.collapsible-content__details p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.collapsible-content__details hr {
+    margin: 0;
+}
+
+.collapsible-content__heading-container {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: normal;
+}
+
+@media screen and (min-width:750px) {
+    .collapsible-content__heading-container p {
+        width: 40%;
+        line-height: normal;
+    }
+
+    .h3.collapsible-content__heading {
+        font-size: 3.4rem;
+    }
+
+    .collapsible-content__summary {
+        font-size: 2rem;
+        line-height: 26px;
+    }
+
+    .collapsible-content__details p {
+        font-size: 1.6rem;
+        line-height: 20px;
+    }
+
+    .collapsible-content__heading-container p {
+        font-size: 1.6rem;
+    }
+}
