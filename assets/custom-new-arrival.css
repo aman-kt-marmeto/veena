@@ -102,54 +102,10 @@
     line-height: 31.2px;
 }
 
-.main-container__slider .splide__arrow {
-    background-color: #D03C3F;
-    opacity: 1;
-}
 
-.main-container__slider .splide__arrow:hover {
-    opacity: 1;
-}
 
-.main-container__slider .splide__arrow {
-    background: radial-gradient(ellipse, black 50%, #D03C3F 50%);
-    background-size: 700% 450%;
-    background-position: right;
-    transition: all .8s ease;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    border-radius: 50px;
-    background-clip: padding-box;
-}
 
-.main-container__slider .splide__arrow:hover {
-    color: #D03C3F;
-    background-position: center;
-    background-size: 150% 300%;
-}
 
-.main-container__slider .splide__arrow[disabled] {
-    opacity: 0;
-}
-
-.main-container__slider .splide__arrow--next {
-    right: 0em;
-    border-radius: 50% 0% 0% 50%;
-    width: 3.4rem;
-    height: 3.4rem;
-}
-
-.main-container__slider .splide__arrow--prev {
-    left: 0em;
-    border-radius: 0% 50% 50% 0%;
-    width: 3.4rem;
-    height: 3.4rem;
-}
-
-.main-container__slider .splide__arrow svg {
-    fill: #fff;
-}
 
 .main-container__mobile-banner img {
     height: 15rem;

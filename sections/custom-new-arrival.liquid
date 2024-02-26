@@ -1,4 +1,5 @@
 {{ 'custom-new-arrival.css' | asset_url | stylesheet_tag }}
+
 {% style %}
   .padding-{{ section.id }} {
     padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
@@ -35,38 +36,30 @@
 <div class="collection-wrapper padding-{{ section.id }}  color-{{ section.settings.color_scheme }}">
   <div class="page-width">
     <div class="main-conatiner">
-
       <div class="main-container__heading">
-        <h2 class="h3">
+        <div class="h3">
           {{ section.settings.main_heading }}
-        </h2>
-        <div class="button hover-button">
-          <a href="{{ section.settings.button_link }}">
-            {{ section.settings.button_label }}
-          </a>
         </div>
+        <a class="button" href="{{ section.settings.button_link }}">
+          <span>{{ section.settings.button_label }}</span>
+        </a>
       </div>
 
       <div class="main-container__grid">
-
         <div class="main-container__banner color-{{ section.settings.banner_color_scheme }}">
           {% if section.settings.banner_desktop_image != blank %}
             <div class="main-container__banner-image">
               {% render 'responsive-picture'
- 
                 , desktopImage: section.settings.banner_desktop_image
- 
-                , 
- mobileImage: section.settings.banner_mobile_image
- 
-                , 
- class: " media media--portrait media--transparent" %}
+                , mobileImage: section.settings.banner_mobile_image
+                , class: " media media--portrait media--transparent"
+              %}
             </div>
           {% endif %}
           <div class="main-container__banner-content">
             {% render 'custom-caption'
- 
-              , caption: section.settings.pre_heading %}
+              , caption: section.settings.pre_heading
+            %}
             <h2 class="h3">
               {{ section.settings.banner_heading }}
             </h2>
@@ -82,33 +75,29 @@
           {% if section.settings.banner_desktop_image != blank %}
             <div class="main-container__mobile-banner-image">
               {% render 'responsive-picture'
- 
                 , desktopImage: section.settings.banner_desktop_image
- 
-                , 
- mobileImage: section.settings.banner_mobile_image
- 
-                , 
- class: " " %}
+                , mobileImage: section.settings.banner_mobile_image
+                , class: " "
+              %}
             </div>
           {% endif %}
           <div class="main-container__mobile-banner-content">
             {% render 'custom-caption'
- 
-              , caption: section.settings.pre_heading %}
+              , caption: section.settings.pre_heading
+            %}
             <h2 class="h3">
               {{ section.settings.banner_heading }}
             </h2>
-            <div class="button">
-              <a href="{{ section.settings.banner_button_link }}">
-                {{ section.settings.banner_button_label }}
+            <div>
+              <a class="button" href="{{ section.settings.banner_button_link }}">
+                <span>{{ section.settings.banner_button_label }}</span>
               </a>
             </div>
           </div>
         </div>
 
         <div class="main-container__slider">
-          <custom-slider data-slider-options='{{ BannerSlider }}'>
+          <Custom-Splide data-slider-options='{{ BannerSlider }}'>
             <div class="splide">
               <div class="splide__track">
                 <ul class="splide__list">
@@ -124,10 +113,27 @@
                 </ul>
               </div>
             </div>
-          </custom-slider>
+            <script id="splideProperties">
+                      {
+                       "autoplay": {{ section.settings.autoplay }},
+                        "arrows": {{ section.settings.arrows }},
+                        "pagination": {{ section.settings.pagination }},
+                        "perPage": {{ section.settings.perPage }},
+                        "breakpoints":{
+                        "640": {
+                            "perPage": 2
+                            }
+                          },
+                        "speed": {{ section.settings.speed |  append: '000'}},
+                        "type": "{{ section.settings.slider_type }}",
+                        "interval":{{ section.settings.interval | append :'000' }},
+                        "rewind":{{ section.settings.rewind }},
+                        "gap":"{{ section.settings.gap |  append: 'rem'}}"
+                      }
+            </script>
+          </Custom-Splide>
         </div>
       </div>
-
     </div>
   </div>
 </div>

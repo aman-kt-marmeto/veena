@@ -1,6 +1,6 @@
 {{ 'custom-image-grid.css' | asset_url | stylesheet_tag }}
 
-{% assign media_option = "media " | append: section.settings.media_option %}
+{% assign media_option = section.settings.media_option %}
 
 {% style %}
   @media screen and (min-width: 750px) {
@@ -67,18 +67,21 @@
       {
         "type": "select",
         "label": "Media shape",
-        "default": "media--square",
+        "default": "media media--square",
         "id": "media_option",
         "options": [
           {
-            "value": "media--square",
+            "value": "media media--square",
             "label": "Square"
           }, {
-            "value": "media--portrait",
+            "value": "media media--portrait",
             "label": "Portrait"
           }, {
-            "value": "media--landscape",
+            "value": "media media--landscape",
             "label": "Landscape"
+          }, {
+            "value": "media--default",
+            "label": "default"
           }
         ]
       }, {

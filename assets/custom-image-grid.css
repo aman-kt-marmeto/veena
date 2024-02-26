@@ -120,3 +120,8 @@
      .custom-image-grid .button:hover {
          color: #d03c3f;
      }
+
+     .media--default>img {
+         width: 100%;
+         object-fit: cover;
+     }

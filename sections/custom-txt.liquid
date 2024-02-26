@@ -1,0 +1,117 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .custom-text {
+    background: #f5f5f5;
+  }
+
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+{% endstyle %}
+
+
+<div class="custom-text section-{{section.id}}-padding color--{{section.settings.color_scheme.id}}">
+  <div class="page-width">
+    <div class="grid grid--1-col grid--2-col-desktop">
+      {% for block in section.blocks %}
+        <div class="container flex center grid__item">
+          <div class="heading h2">{{ block.settings.heading }}</div>
+          <div class="content">{{ block.settings.content }}</div>
+          <div>
+            <a class="button" href="{{ block.settings.button_link }}">
+              <span>{{ block.settings.button_label }}</span>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom text",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "max": 100,
+        "min": 0,
+        "unit": "px",
+        "default": 30,
+        "step": 1
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "max": 100,
+        "min": 0,
+        "unit": "px",
+        "default": 30,
+        "step": 1
+      }, {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": " Color Schema",
+        "info": "applies color schema to whole section",
+        "default": "scheme-1"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Text content",
+        "type": "text",
+        "settings": [
+          {
+            "type": "text",
+            "default": "Elegance Redifined",
+            "id": "heading",
+            "label": "Heading"
+          }, {
+            "type": "richtext",
+            "default": "<p>Discover timeless fashion that seamlessly blends sophistication and modern flair. Our curated collection reflects a commitment to style, quality, and individuality, ensuring you make a statement with every ensemble.</p>",
+            "id": "content",
+            "label": "Content"
+          }, {
+            "type": "text",
+            "label": "Button label",
+            "default": "click",
+            "id": "button_label"
+          }, {
+            "type": "url",
+            "label": "Button url",
+            "id": "button_url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom text"
+      }
+    ]
+  }
+{% endschema %}

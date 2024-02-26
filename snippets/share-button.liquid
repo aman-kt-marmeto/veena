@@ -6,25 +6,29 @@
 
   Usage:
   {% render 'share-button',
-    block: block,
-    share_link: share_url
+  block: block,
+  share_link: share_url
   %}
 {% endcomment %}
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
 
-<share-button id="Share-{{ section.id }}" class="share-button quick-add-hidden" {{ block.shopify_attributes }}>
+<share-button
+  id="Share-{{ section.id }}"
+  class="share-button quick-add-hidden"
+  {{ block.shopify_attributes }}>
   <button class="share-button__button hidden">
-    {% render 'icon-share' %}
-    {{ block.settings.share_label | escape }}
+    {% render 'icon-share_1' %}
   </button>
   <details id="Details-{{ block.id }}-{{ section.id }}">
     <summary class="share-button__button">
-      {% render 'icon-share' %}
-      {{ block.settings.share_label | escape }}
+      {% render 'icon-share_1' %}
     </summary>
     <div class="share-button__fallback motion-reduce">
       <div class="field">
-        <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status"> </span>
+        <span
+          id="ShareMessage-{{ section.id }}"
+          class="share-button__message hidden"
+          role="status"></span>
         <input
           type="text"
           class="field__input"
@@ -32,8 +36,7 @@
           value="{{ share_link }}"
           placeholder="{{ 'general.share.share_url' | t }}"
           onclick="this.select();"
-          readonly
-        >
+          readonly>
         <label class="field__label" for="ShareUrl-{{ section.id }}">{{ 'general.share.share_url' | t }}</label>
       </div>
       <button class="share-button__close hidden no-js-hidden">

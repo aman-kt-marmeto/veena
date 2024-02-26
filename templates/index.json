@@ -146,7 +146,7 @@
         "images_3z9X68"
       ],
       "settings": {
-        "media_option": "media--landscape",
+        "media_option": "media--default",
         "desktop_col": 2,
         "padding_top": 68,
         "padding_bottom": 0
@@ -177,7 +177,39 @@
         "rewind": true,
         "color_scheme": "",
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 0
+      }
+    },
+    "custom_new_arrival_FkPWRp": {
+      "type": "custom-new-arrival",
+      "settings": {
+        "main_heading": "New Arrivals",
+        "button_label": "See All Product",
+        "button_link": "",
+        "banner_desktop_image": "shopify:\/\/shop_images\/1_c1c7fe9b-15a8-43a4-8d1a-c53818.jpg",
+        "pre_heading": "Women's Apparel",
+        "banner_heading": "exclusive Best & New Arrivals collection",
+        "banner_button_label": "Explore",
+        "banner_button_link": "",
+        "banner_color_scheme": "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0",
+        "slider_type": "loop",
+        "perPage": 3,
+        "speed": 1,
+        "interval": 1,
+        "gap": 2,
+        "autoplay": false,
+        "arrows": true,
+        "pagination": false,
+        "rewind": false,
+        "product_list": [
+          "full-sleeve-high-neck-t-shirt",
+          "long-casual-hooded-coat",
+          "full-sleeve-high-neck-t-shirt-1",
+          "men-winter-jacket"
+        ],
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custon_text_slider_AwhdaK": {
@@ -264,7 +296,7 @@
         "images_YABwxh"
       ],
       "settings": {
-        "media_option": "media--square",
+        "media_option": "media media--square",
         "desktop_col": 2,
         "padding_top": 100,
         "padding_bottom": 60
@@ -380,7 +412,7 @@
             "button_label": "Discover More",
             "button_link": "shopify:\/\/collections",
             "product_first": "carson-chore-jacket-black-hole",
-            "first_dot_position_top_x": 50,
+            "first_dot_position_top_x": 26,
             "first_dot_position_top_y": 23,
             "product_second": "denim-chore-coat-black",
             "second_dot_position_top_x": 33,
@@ -396,8 +428,8 @@
             "button_label": "Discover More",
             "button_link": "shopify:\/\/collections",
             "product_first": "highland-tee-white",
-            "first_dot_position_top_x": 53,
-            "first_dot_position_top_y": 35,
+            "first_dot_position_top_x": 31,
+            "first_dot_position_top_y": 16,
             "product_second": "carhartt-coat-black",
             "second_dot_position_top_x": 42,
             "second_dot_position_top_y": 71
@@ -483,17 +515,18 @@
         "padding_bottom": 30
       }
     },
-    "custom_image_grid_x9eVJq": {
+    "custom_image_grid_AncyYC": {
       "type": "custom-image-grid",
       "blocks": {
-        "images_yVXMh3": {
+        "images_8K4gGB": {
           "type": "Images",
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438.jpg",
-            "pre_heading": "Introduce",
-            "heading": "We Believe in the Power of Fashion",
-            "button_label": "Show More",
-            "button_link": "shopify:\/\/collections\/best-seller",
+            "mobile_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438.jpg",
+            "pre_heading": "Caption",
+            "heading": "Women's Clothing Collection",
+            "button_label": "Button label",
+            "button_link": "",
             "button_style_secondary": false,
             "color_scheme": "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0",
             "content_position": "bottom-center",
@@ -502,13 +535,13 @@
         }
       },
       "block_order": [
-        "images_yVXMh3"
+        "images_8K4gGB"
       ],
       "settings": {
-        "media_option": "media--landscape",
+        "media_option": "media--default",
         "desktop_col": 1,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "custom_customer_review_d6HpjX": {
@@ -651,7 +684,7 @@
         "accordian_Cqtj9U"
       ],
       "settings": {
-        "background_color": "#F5F5F5",
+        "background_color": "#f5f5f5",
         "heading": "FAQ",
         "description": "Ensure that your FAQs are regularly updated based on common customer queries and changes in your business operations.",
         "padding_top": 36,
@@ -665,6 +698,7 @@
     "custom_rich_text_P7GrWY",
     "custom_image_grid_6hkF77",
     "custom_collection_list_E6NTBk",
+    "custom_new_arrival_FkPWRp",
     "custon_text_slider_AwhdaK",
     "custom_image_grid_a7UXRc",
     "custom_timmer_x7dtPA",
@@ -672,7 +706,7 @@
     "custom_usp_7nLFLm",
     "custom_lookbook_GTeN8Y",
     "custom_logo_slide_UXYcWc",
-    "custom_image_grid_x9eVJq",
+    "custom_image_grid_AncyYC",
     "custom_customer_review_d6HpjX",
     "custom_blog_RdUhjD",
     "custom_faq_6TNhax"

@@ -439,11 +439,12 @@
               </a>
             {%- when 'share' -%}
               {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
-              {% render 'share-button',
+              <div class="share-absolute">
+                {% render 'share-button',
                 block: block,
                 share_link: share_url
               %}
-
+              </div>
             {%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'buy_buttons' -%}
