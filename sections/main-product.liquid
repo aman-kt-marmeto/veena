@@ -135,28 +135,6 @@
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                  <p class="line-item-property__field">
-  <label>Your name</label><br>
-  <input type="hidden" id="Your-name" name="properties[Your name]">
-  <script>
-    function fillHidden(hiddenname) {
-    var checkboxes = document.querySelectorAll('[hidden-data="'+hiddenname+'"]');
-    var hiddenfield = document.getElementById(hiddenname);
-    hiddenfield.value = ""
-    var i;
-    for (i = 0; i < checkboxes.length; i++) {
-      var x = checkboxes[i];
-      if(x.checked){
-        if(hiddenfield.value==""){
-          hiddenfield.value = x.value;
-          }else{
-          hiddenfield.value = hiddenfield.value + ", " + x.value; 
-          } 
-        }
-      }
-    }
-  </script>
-</p>
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   {{ form | payment_terms }}
                 {%- endform -%}
