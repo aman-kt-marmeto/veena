@@ -119,6 +119,8 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-2",
     "free_shipping": "20000",
+    "checkout_logo_image": "shopify:\/\/shop_images\/n_Veena_291c06d2-476c-40e5-a43b-b31cea145d2c.png",
+    "checkout_button_color": "#d03c3f",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -250,19 +252,15 @@
           "color_settings_PqTtLb",
           "color_settings_XGfHfV"
         ],
-        "settings": {
-        }
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
