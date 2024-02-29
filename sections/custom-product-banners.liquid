@@ -1,0 +1,107 @@
+{{ "custom-produt-banners.css" | asset_url | stylesheet_tag }}
+
+
+{% style %}
+
+  .padding--{{ section.id }} {
+    padding-top: {{ section.settings.padding_top |  divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_buttom |  divided_by: 2 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .padding--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_buttom }}px;
+    }
+  }
+{% endstyle %}
+
+
+<div class="custom-product-banner padding--{{section.id}}">
+  <div class="page-width">
+    <div class="grid-container">
+      {% for block in section.blocks limit: 4 %}
+        <div class="grid__item-card grid__item-{{forloop.index}}">
+          {% render 'responsive-picture'
+            , desktopImage: block.settings.desktop_image
+          %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom product banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "range",
+        "label": "Padding top",
+        "id": "padding_top",
+        "default": 0,
+        "min": 0,
+        "unit": "px",
+        "max": 100,
+        "step": 1
+      }, {
+        "type": "range",
+        "label": "Padding bottom",
+        "id": "padding_bottom",
+        "default": 0,
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Banner block",
+        "limit": 4,
+        "type": "image_block",
+        "settings": [
+          {
+            "label": "Image (Desktop)",
+            "type": "image_picker",
+            "id": "desktop_image"
+          },
+          {
+            "type": "text",
+            "label": "Content heading",
+            "id": "content_heading",
+            "default": "Heading"
+          },
+          {
+            "type": "text",
+            "label": "Content pre heading",
+            "id": "content_pre_heading",
+            "default": "Pre Heading"
+          },
+          {
+            "type": "text",
+            "label": "Description",
+            "id": "description",
+            "default": "Description"
+          }, {
+            "type": "text",
+            "id": "button_label",
+            "default": "Click",
+            "label": "Button label"
+          }, {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button url"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom product banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,23 +1,112 @@
 <style type="text/css">
   .template-404 .title + * {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   @media screen and (min-width: 750px) {
     .template-404 .title + * {
-      margin-top: 2rem;
+      margin-top: 0;
     }
+  }
+
+
+  /*
+   ======================
+   404 page
+   =======================
+*/
+
+
+  .page_404 {
+    background: #fff;
+    font-family: 'Arvo'
+    , serif;
+  }
+
+  .page_404 p,
+  .page_404 h1,
+  .page_404 h2,
+  .page_404 h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page_404 a {
+    text-decoration: none;
+    background-color: #d03c3f;
+  }
+
+
+  .page_404 img {
+    width: 100%;
+  }
+
+  .four_zero_four_bg {
+
+    background-image: url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif');
+    height: 400px;
+    background-position: center;
+  }
+
+
+  .four_zero_four_bg h1 {
+    margin: 0;
+    font-size: 80px;
+  }
+
+  .four_zero_four_bg h3 {
+    margin: 0;
+    font-size: 80px;
+  }
+
+  .contant_box_404 p {
+    margin: 0;
+  }
+  .contant_box_404 h2 {
+    margin: 0;
+  }
+
+  .link_404 {
+    color: #fff !important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+  }
+  .contant_box_404 {
+    margin-top: -50px;
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+<div class="template-404 center">
+  <section class="page_404">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <div class="col-sm-10 col-sm-offset-1  text-center">
+            <div class="four_zero_four_bg">
+              <h1 class="text-center ">404</h1>
+            </div>
+            <div class="contant_box_404">
+              <h3 class="h2">
+                Look like you're lost
+              </h3>
+              <p>the page you are looking for not avaible!</p>
+
+              <a href="" class="link_404">Go to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% comment %} <p>
+                                                                                                                    {{ 'templates.404.subtext' | t }}
+                                                                                                                  </p>
+                                                                                                                  <h1 class="title">
+                                                                                                                    {{ 'templates.404.title' | t }}
+  </h1> {% endcomment %}
+{% comment %} <a href="{{ routes.all_products_collection_url }}" class="button">
+                                                                                                                    {{ 'general.continue_shopping' | t }}
+  </a> {% endcomment %}
 </div>

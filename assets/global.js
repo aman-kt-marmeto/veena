@@ -1119,7 +1119,9 @@ class VariantSelects extends HTMLElement {
         const destination = document.getElementById(`price-${this.dataset.section}`);
 
         document.querySelector("#product-meta-content").innerHTML = html.querySelector("#product-meta-content").innerHTML
+        document.querySelector("#atc-2").dataset.productId = html.querySelector("#atc-2").dataset.productId;
 
+        document.querySelector("#custom-discount-banner").innerHTML = html.querySelector("#custom-discount-banner").innerHTML
 
         document.querySelector("#varientSelectedValue").innerHTML = html.querySelector("#varientSelectedValue").innerHTML
 

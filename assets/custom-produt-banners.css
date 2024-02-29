@@ -1,0 +1,46 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 'main-img' 'sec-img' 'third-img' 'fourth-img';
+    gap: 20px;
+
+}
+
+
+
+.grid__item-1 {
+    grid-area: main-img;
+}
+
+.grid__item-2 {
+    grid-area: sec-img;
+}
+
+.grid__item-3 {
+    grid-area: third-img;
+}
+
+.grid__item-4 {
+    grid-area: fourth-img;
+}
+
+.grid__item-card {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 25rem;
+}
+
+.custom-product-banner img {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+
+}
+
+@media screen and (min-width:750px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: "main-img main-img sec-img sec-img"
+            "main-img main-img third-img fourth-img";
+    }
+}

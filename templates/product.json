@@ -9,13 +9,6 @@
             "share_label": "Share"
           }
         },
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -33,9 +26,26 @@
             "swatch_shape": "circle"
           }
         },
+        "inventory_ndDnUq": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
+          "disabled": true,
           "settings": {
+          }
+        },
+        "custom_discount_banner_pHHh4M": {
+          "type": "custom_discount_banner",
+          "disabled": true,
+          "settings": {
+            "banner_heading": "Discount code",
+            "background_color": "linear-gradient(271deg, rgba(185, 56, 242, 1), rgba(217, 66, 242, 1), rgba(100, 42, 207, 1) 100%, rgba(99, 43, 207, 1) 100%, rgba(65, 34, 207, 1) 100%)"
           }
         },
         "buy_buttons": {
@@ -73,11 +83,12 @@
       },
       "block_order": [
         "share",
-        "vendor",
         "title",
         "price",
         "variant_picker",
+        "inventory_ndDnUq",
         "quantity_selector",
+        "custom_discount_banner_pHHh4M",
         "buy_buttons",
         "description",
         "icon_with_text_mRk6L4",
@@ -131,6 +142,65 @@
         "color_scheme": "scheme-2"
       }
     },
+    "custom_product_banners_RGLgJK": {
+      "type": "custom-product-banners",
+      "blocks": {
+        "image_block_W4g6KC": {
+          "type": "image_block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/1_d1ac205b-b4a5-40db-a149-92f268.jpg",
+            "content_heading": "Heading",
+            "content_pre_heading": "Pre Heading",
+            "description": "Description",
+            "button_label": "Click",
+            "button_url": ""
+          }
+        },
+        "image_block_JPWGAX": {
+          "type": "image_block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/2_7a4f3b90-123c-4ddb-8516-50ad7a.jpg",
+            "content_heading": "Heading",
+            "content_pre_heading": "Pre Heading",
+            "description": "Description",
+            "button_label": "Click",
+            "button_url": ""
+          }
+        },
+        "image_block_kfC9Mc": {
+          "type": "image_block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/3_5f501b6a-db8f-4b53-b9ca-c2aa1e.jpg",
+            "content_heading": "Heading",
+            "content_pre_heading": "Pre Heading",
+            "description": "Description",
+            "button_label": "Click",
+            "button_url": ""
+          }
+        },
+        "image_block_nwm9NJ": {
+          "type": "image_block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/4_d6084ff2-c86b-4f52-b59b-0c92b8.jpg",
+            "content_heading": "Heading",
+            "content_pre_heading": "Pre Heading",
+            "description": "Description",
+            "button_label": "Click",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_W4g6KC",
+        "image_block_JPWGAX",
+        "image_block_kfC9Mc",
+        "image_block_nwm9NJ"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -148,11 +218,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "recently-viewed-products": {
+      "type": "wizaah-recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed"
+      }
     }
   },
   "order": [
     "main",
     "custom_txt_KLThGW",
-    "related-products"
+    "custom_product_banners_RGLgJK",
+    "related-products",
+    "recently-viewed-products"
   ]
 }

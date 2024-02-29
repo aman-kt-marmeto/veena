@@ -198,7 +198,7 @@
 
 .facets__summary {
   color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
 }
@@ -221,10 +221,10 @@
 
 .facets__summary span {
   transition: text-decoration var(--duration-short) ease;
+
 }
 
 .facets__summary:hover .facets__summary-label {
-  text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 
@@ -404,7 +404,7 @@
   position: absolute;
   left: 0.3rem;
   z-index: 5;
-  top: 1.4rem;
+  top: 2.5rem;
 }
 
 .facet-checkbox>input[type='checkbox']:checked~.icon-checkmark {

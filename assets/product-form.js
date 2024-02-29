@@ -40,10 +40,14 @@ if (!customElements.get('product-form')) {
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;
-
+        for (let data of formData.entries()) {
+          console.log(data)
+        }
+        console.log(`${routes.cart_add_url}`)
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
+            console.log(response)
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',
@@ -85,6 +89,7 @@ if (!customElements.get('product-form')) {
               );
               quickAddModal.hide(true);
             } else {
+
               this.cart.renderContents(response);
             }
           })

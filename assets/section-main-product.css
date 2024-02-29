@@ -1508,6 +1508,10 @@ a.product__text {
   }
 }
 
+.drewer__footer .payment__svg {
+  background-color: #f5f5f5
+}
+
 .payment__svg {
   display: flex;
   justify-content: space-between;

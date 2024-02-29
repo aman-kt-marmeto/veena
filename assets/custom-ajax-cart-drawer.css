@@ -1,0 +1,65 @@
+.circle {
+    display: block !important;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+.c-left {
+    left: -35px;
+}
+
+.c-right {
+    right: -35px;
+}
+
+
+
+.discount-banner-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+    min-height: 121px;
+    border-radius: 16px;
+}
+
+.discount-bannner__heading {
+    color: #fff;
+}
+
+.code-container {
+    display: flex;
+    align-items: center;
+}
+
+.code-container button {
+    padding: 15px 10px;
+    background: #fff;
+    border: 2px solid #fff;
+    outline: none;
+    height: 50px;
+    min-width: 90px;
+}
+
+.code-container button:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+.code-container .code {
+    padding: 15px 10px;
+    border: 2px dashed #fff;
+    border-right: none;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

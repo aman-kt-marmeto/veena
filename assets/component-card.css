@@ -477,3 +477,8 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.align-jstify-center {
+  align-items: center;
+  justify-content: center;
+}

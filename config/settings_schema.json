@@ -1465,5 +1465,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Free shipping bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "free_shipping",
+        "label": "Free shipping limit"
+      }
+    ]
   }
 ]

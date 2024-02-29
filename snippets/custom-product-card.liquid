@@ -22,7 +22,6 @@
 {% endstyle %}
 <custom-product-card
   data-product-handle="{{ product.handle }}"
-  data-section-id="{{ section_id }}"
   data-product-id="{{product.id}}"
   data-product-url="{{product.url}}">
   <div class="product-card-container">
@@ -98,7 +97,7 @@
                         type="radio"
                         name="{{product.handle}}"
                         id="{{varient_handleize}}"
-                        value="{{varient}}"
+                        value="{{current_varient.options}}"
                         {% if product_option.selected_value contains varient %}
                         aria-selected="true"
                         checked
@@ -145,6 +144,6 @@
   </div>
 
   <script>
-    {{product.variants | json}}
+    {{ product.variants | json }}
   </script>
 </custom-product-card>

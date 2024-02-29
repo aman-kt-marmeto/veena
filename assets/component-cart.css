@@ -19,13 +19,20 @@ cart-items.is-empty .title-wrapper-with-link,
   display: none;
   text-align: center;
   padding: 3rem 0 1rem;
+  background-color: #f5f5f5;
+  border-radius: 16px;
 }
 
 .cart__empty-text {
   margin: 4.5rem 0 2rem;
 }
 
-.cart__contents > * + * {
+.cart__contents {
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.cart__contents>*+* {
   margin-top: 2.5rem;
 }
 
@@ -57,7 +64,7 @@ cart-items {
 
 .cart__items {
   position: relative;
-  padding-bottom: 3rem;
+
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
@@ -69,11 +76,11 @@ cart-items {
   padding-bottom: 5rem;
 }
 
-.cart__footer > div:only-child {
+.cart__footer>div:only-child {
   margin-left: auto;
 }
 
-.cart__footer > * + * {
+.cart__footer>*+* {
   margin-top: 6.5rem;
 }
 
@@ -120,14 +127,14 @@ cart-items {
   .cart__items {
     grid-column-start: 1;
     grid-column-end: 3;
-    padding-bottom: 4rem;
+
   }
 
-  .cart__contents > * + * {
+  .cart__contents>*+* {
     margin-top: 0;
   }
 
-  .cart__items + .cart__footer {
+  .cart__items+.cart__footer {
     grid-column: 2;
   }
 
@@ -141,23 +148,29 @@ cart-items {
     padding-top: 0;
   }
 
-  .cart__footer > * {
+  .cart__footer>* {
     width: 35rem;
   }
 
-  .cart__footer > * + * {
+  .cart__footer>*+* {
     margin-left: 4rem;
     margin-top: 0;
   }
 }
 
-.cart__ctas button {
-  width: 100%;
+.cart__ctas .button {
+  flex-grow: 1;
+  width: 50%;
+  background-color: #d03c3f;
 }
 
-.cart__ctas > *:not(noscript:first-child) + * {
-  margin-top: 1rem;
+.cart__ctas .button::after {
+  background-color: black;
 }
+
+/* .cart__ctas>*:not(noscript:first-child)+* {
+  margin-top: 1rem;
+} */
 
 .cart__update-button {
   margin-bottom: 1rem;
@@ -176,7 +189,7 @@ cart-items {
   border-radius: var(--buttons-radius-outset) !important;
 }
 
-.cart__blocks > * + * {
+.cart__blocks>*+* {
   margin-top: 1rem;
 }
 
@@ -197,6 +210,7 @@ cart-items {
 }
 
 .cart__ctas {
+  margin: 15px 0;
   text-align: center;
 }
 
@@ -221,6 +235,18 @@ cart-items {
 
   .cart__ctas {
     display: flex;
+    justify-content: center;
     gap: 1rem;
   }
+}
+
+
+
+
+.crt-pg-free-shipping p {
+  color: #000;
+}
+
+.crt-pg-free-shipping .shipping-bar .shipping-bar__container {
+  background: #ccc;
 }
