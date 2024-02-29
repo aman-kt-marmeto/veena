@@ -118,6 +118,8 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "checkout_logo_image": "shopify:\/\/shop_images\/n_Veena_291c06d2-476c-40e5-a43b-b31cea145d2c.png",
+    "checkout_button_color": "#d03c3f",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
