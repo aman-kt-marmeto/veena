@@ -2,6 +2,46 @@
   max-width: 100%;
 }
 
+.contact__button button {
+  background-color: #d03c3f;
+}
+
+.contact__button button::after {
+  background-color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.facebook-frst {
+  padding-left: 0 !important;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.flex-box>* {
+  flex-basis: 50%;
+}
+
+.form-cart-dsc {
+  flex-basis: 25%;
+}
+
+.form-cart-dsc p {
+  color: #000;
+  margin: 0;
+}
+
+.form-cart-dsc div {
+  padding-bottom: 10px;
+}
+
+
 .contact .form__message {
   align-items: flex-start;
 }
