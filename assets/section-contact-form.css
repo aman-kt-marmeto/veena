@@ -20,12 +20,26 @@
 
 .flex-box {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
 }
 
 .flex-box>* {
-  flex-basis: 50%;
+  flex-basis: 100%;
+}
+
+@media screen and (min-width:426px) {
+  .flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .flex-box>* {
+    flex-basis: 50%;
+  }
 }
 
 .form-cart-dsc {
