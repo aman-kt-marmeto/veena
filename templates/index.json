@@ -125,6 +125,7 @@
         "images_3z9X68": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_4.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
