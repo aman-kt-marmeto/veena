@@ -155,12 +155,11 @@
         "heading_size": "h1",
         "button_label": "Shop Now",
         "collection_list": [
-          "accessories-1",
-          "mens-jacket",
-          "shoes",
+          "accessories",
           "handbags",
+          "shoes",
           "best-selling",
-          "t-shirt-1"
+          "t-shirt"
         ],
         "slider_type": "loop",
         "perPage": 5,
