@@ -197,10 +197,7 @@
         "pagination": false,
         "rewind": false,
         "product_list": [
-          "full-sleeve-high-neck-t-shirt",
-          "long-casual-hooded-coat",
-          "full-sleeve-high-neck-t-shirt-1",
-          "men-winter-jacket"
+
         ],
         "color_scheme": "",
         "padding_top": 36,
@@ -389,7 +386,7 @@
             "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
             "button_label": "Discover More",
             "button_link": "shopify:\/\/collections",
-            "product_first": "august-rib-wool-oak",
+            "product_first": "nylon-waist-bag",
             "first_dot_position_top_x": 26,
             "first_dot_position_top_y": 22,
             "product_second": "black-stripe-spring-oxford-shirt",
