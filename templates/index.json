@@ -111,6 +111,7 @@
         "images_mMkGmY": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_3.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
