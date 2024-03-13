@@ -36,6 +36,7 @@
         "slides_yngwJV": {
           "type": "slides",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_2.jpg",
             "banner_caption": "Trendy Classics",
             "banner_heading_left": "Discover Signature Look: Fashion Forward and Fabulous!",
             "animated_linked_text": "",
@@ -74,7 +75,7 @@
         "heading_b9tDL6": {
           "type": "heading",
           "settings": {
-            "heading": "Fashion Emerges<\/br> As A Universal Language",
+            "heading": "Fashion Emerges <\/br> As A <\/br>Universal Language",
             "heading_size": "h0"
           }
         },
