@@ -288,7 +288,7 @@
         "images_YABwxh"
       ],
       "settings": {
-        "media_option": "media media--portrait",
+        "media_option": "media media--square",
         "desktop_col": 2,
         "padding_top": 100,
         "padding_bottom": 60
