@@ -259,6 +259,7 @@
         "images_tndna4": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_12.jpg",
             "pre_heading": "Men's",
             "heading": "Introducing Our Distinguished Men's Clothing Collection",
             "button_label": "Explore",
@@ -272,6 +273,7 @@
         "images_YABwxh": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_13.jpg",
             "pre_heading": "Women's",
             "heading": "Elevate Your Wardrobe With Our Women's Clothing Collection",
             "button_label": "Explore",
