@@ -142,7 +142,7 @@
         "images_3z9X68"
       ],
       "settings": {
-        "media_option": "media media--landscape",
+        "media_option": "media--default",
         "desktop_col": 2,
         "padding_top": 68,
         "padding_bottom": 0
