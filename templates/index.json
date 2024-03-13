@@ -6,8 +6,7 @@
         "slides_KBiED7": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/1.webp",
-            "mobile_image": "shopify:\/\/shop_images\/1.webp",
+            "desktop_image": "shopify:\/\/shop_images\/download.jpg",
             "banner_caption": "Women's Apparel",
             "banner_heading_left": "Elevate your wardrobe with our",
             "animated_linked_text": "limited-time",
@@ -22,8 +21,6 @@
         "slides_qbGTVt": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/3.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/3.jpg",
             "banner_caption": "Modern Elegance",
             "banner_heading_left": "Step into the World of Style with the Latest Fashion Trends Unveiled!",
             "animated_linked_text": "",
@@ -38,8 +35,6 @@
         "slides_yngwJV": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/4.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/4.jpg",
             "banner_caption": "Trendy Classics",
             "banner_heading_left": "Discover Signature Look: Fashion Forward and Fabulous!",
             "animated_linked_text": "",
@@ -114,8 +109,6 @@
         "images_mMkGmY": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4264.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Rectangle_4264.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
@@ -129,7 +122,6 @@
         "images_3z9X68": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4265.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
@@ -186,7 +178,6 @@
         "main_heading": "New Arrivals",
         "button_label": "See All Product",
         "button_link": "",
-        "banner_desktop_image": "shopify:\/\/shop_images\/1_c1c7fe9b-15a8-43a4-8d1a-c53818.jpg",
         "pre_heading": "Women's Apparel",
         "banner_heading": "exclusive Best & New Arrivals collection",
         "banner_button_label": "Explore",
@@ -264,8 +255,6 @@
         "images_tndna4": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Rectangle_55.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Rectangle_55.jpg",
             "pre_heading": "Men's",
             "heading": "Introducing Our Distinguished Men's Clothing Collection",
             "button_label": "Explore",
@@ -279,7 +268,6 @@
         "images_YABwxh": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/Rectangle_56.jpg",
             "pre_heading": "Women's",
             "heading": "Elevate Your Wardrobe With Our Women's Clothing Collection",
             "button_label": "Explore",
@@ -390,7 +378,6 @@
         "lookbook_XzJ3C7": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/1_86583ec4-835c-45cd-999c-b7e8b1.jpg",
             "heading": "Women's Winter Clothes",
             "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
             "button_label": "Discover More",
@@ -406,7 +393,6 @@
         "lookbook_pwdAhR": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/2_a11b3061-4da9-4c80-ad4a-2ed8e9.jpg",
             "heading": "Our Men's Winter Clothes",
             "description": "<p>welcome to our Men's Winter Clothes Collection, where every piece is a statement in comfort and style.<\/p>",
             "button_label": "Discover More",
@@ -422,7 +408,6 @@
         "lookbook_HkYpF4": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/3_e98fbf29-76ef-498a-837a-517c37.jpg",
             "heading": "Women's Outdoor Clothes Collection",
             "description": "<p>Embrace the beauty of nature with gear that complements your adventurous spirit.<\/p>",
             "button_label": "Discover More",
@@ -454,49 +439,41 @@
         "logo_hzF3zz": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/1_cd395017-1471-444b-a792-aee354.png"
           }
         },
         "logo_eWNMkH": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/7.png"
           }
         },
         "logo_ibT8kY": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/2_26caca81-ef1b-413a-b2e8-dacb40.png"
           }
         },
         "logo_RjHDc9": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/5.png"
           }
         },
         "logo_6WEDjD": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/3_526ac6af-9bcf-4f5a-a1f0-3b004c.png"
           }
         },
         "logo_nHhjWW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/6.png"
           }
         },
         "logo_V6R7j9": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/8.png"
           }
         },
         "logo_DgyWRW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/4_97056f97-b5a0-46f5-aa2e-d315f3.png"
           }
         }
       },
@@ -521,8 +498,6 @@
         "images_8K4gGB": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Button label",
@@ -550,7 +525,6 @@
         "review_block_h7QBHJ": {
           "type": "review_block",
           "settings": {
-            "profile_picture": "shopify:\/\/shop_images\/3_b85a25e7-eff6-49ab-9fc7-ecdf71.jpg",
             "customer_name": "Sarah Mitchell",
             "customer_profession": "Stylist",
             "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
@@ -559,7 +533,6 @@
         "review_block_dQQfxz": {
           "type": "review_block",
           "settings": {
-            "profile_picture": "shopify:\/\/shop_images\/4_e6c9abf8-cab4-4c51-8b5c-b87f68.jpg",
             "customer_name": "Sarah Mitchell",
             "customer_profession": "Stylist",
             "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
@@ -568,7 +541,6 @@
         "review_block_BGgUTG": {
           "type": "review_block",
           "settings": {
-            "profile_picture": "shopify:\/\/shop_images\/2_0b300886-b49e-4ef1-a786-f0b7f7.jpg",
             "customer_name": "Sarah Mitchell",
             "customer_profession": "Stylist",
             "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
@@ -577,7 +549,6 @@
         "review_block_8d4NJw": {
           "type": "review_block",
           "settings": {
-            "profile_picture": "shopify:\/\/shop_images\/1_2db38707-707e-4fd6-ab12-35397e.jpg",
             "customer_name": "Sarah Mitchell",
             "customer_profession": "Stylist",
             "customer_comment": "<p>Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.<\/p>"
