@@ -6,6 +6,7 @@ class CustomProductCard extends HTMLElement {
         this.productId = this.dataset.productId;
         this.productUrl = this.dataset.productUrl;
         this.addEventListener('change', this.getVarientId)
+      console.log(this.productUrl)
     }
 
     getVarientId() {
