@@ -82,10 +82,11 @@
           {% for product_option in product.options_with_values %}
             {% assign optionName = product_option.name | handleize %}
               {% unless optionName contains 'color'or optionName contains 'color' %}
-                {% for varient in product_option.values %}
+               <div class="size-selction">
+                  {% for varient in product_option.values %}
                   {% assign optionName = product_option.name | handleize %}
                     <input
-                    type="checkbox"
+                    type="radio"
                     name="{{product.handle}}"
                     value="{{ varient }}"
                     {% if product_option.selected_value contains varient %}
@@ -93,6 +94,7 @@
                     {% endif %}>
                       {{ optionName  }}
                 {% endfor %}
+               </div>
               {% endunless %}
             {% if optionName contains 'Color' or optionName contains 'color' %}
               {% for varient in product_option.values %}
@@ -103,7 +105,7 @@
                       id="{{ varient|append: forloop.index }}"
                       for="{{varient_handleize |append:section_id|append:product.id}}">
                       <input
-                        type="checkbox"
+                        type="radio"
                         name="{{product.handle}}"
                         id="{{varient_handleize |append:section_id|append:product.id}}"
                         value="{{ varient }}"
