@@ -2,24 +2,17 @@ class CustomProductCard extends HTMLElement {
     constructor() {
         super();
         this.productHandle = this.dataset.productHandle;
-        console.log(this.productHandle)
         this.productId = this.dataset.productId;
         this.productUrl = this.dataset.productUrl;
         this.addEventListener('change', this.getVarientId)
-      console.log(this.productUrl)
     }
 
     getVarientId() {
        this.variantData = JSON.parse(this.querySelector('script').textContent);
-      console.log(this.variantData)
         this.varients = Array.from(this.querySelectorAll('input[type="radio"]:checked'), input => input.value);
-      console.log(this.varients)
         this.currentVarient = this.variantData.find(item => {
-          console.log(item.options.join(""))
-          console.log(this.varients.join(""))
             return item.options.join("") == this.varients.join("")
         })
-        console.log(this.currentVarient)
         this.getVarient(this.currentVarient.id)
     }
 
