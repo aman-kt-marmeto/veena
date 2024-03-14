@@ -197,7 +197,14 @@
         "pagination": false,
         "rewind": false,
         "product_list": [
-          "nylon-waist-bag"
+          "nylon-waist-bag",
+          "full-sleeve-high-neck-t-shirt",
+          "full-sleeve-high-neck-t-shirt-1",
+          "men-winter-jacket",
+          "mens-half-sleeve-t-shirt",
+          "mens-winter-hooded-jacket",
+          "womens-oversized-hoodie",
+          "womens-casual-sweaters"
         ],
         "color_scheme": "",
         "padding_top": 36,
@@ -502,6 +509,7 @@
         "images_8K4gGB": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_20.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Button label",
