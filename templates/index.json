@@ -404,14 +404,15 @@
         "lookbook_pwdAhR": {
           "type": "lookbook",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_15.jpg",
             "heading": "Our Men's Winter Clothes",
             "description": "<p>welcome to our Men's Winter Clothes Collection, where every piece is a statement in comfort and style.<\/p>",
             "button_label": "Discover More",
             "button_link": "shopify:\/\/collections",
-            "product_first": "carson-chore-jacket-black-hole",
+            "product_first": "men-winter-jacket",
             "first_dot_position_top_x": 26,
             "first_dot_position_top_y": 23,
-            "product_second": "denim-chore-coat-black",
+            "product_second": "full-sleeve-high-neck-t-shirt-1",
             "second_dot_position_top_x": 33,
             "second_dot_position_top_y": 76
           }
@@ -593,15 +594,15 @@
     "custom_blog_RdUhjD": {
       "type": "custom-blog",
       "blocks": {
-        "blog_VBVXtQ": {
+        "blog_BgX4dp": {
           "type": "blog",
           "settings": {
-            "blog": "fashion"
+            "blog": "news"
           }
         }
       },
       "block_order": [
-        "blog_VBVXtQ"
+        "blog_BgX4dp"
       ],
       "settings": {
         "heading": "Let You Know",
