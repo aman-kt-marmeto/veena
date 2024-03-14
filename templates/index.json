@@ -396,7 +396,7 @@
             "product_first": "nylon-waist-bag",
             "first_dot_position_top_x": 26,
             "first_dot_position_top_y": 22,
-            "product_second": "black-stripe-spring-oxford-shirt",
+            "product_second": "full-sleeve-high-neck-t-shirt",
             "second_dot_position_top_x": 36,
             "second_dot_position_top_y": 70
           }
@@ -420,14 +420,15 @@
         "lookbook_HkYpF4": {
           "type": "lookbook",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/download_16.jpg",
             "heading": "Women's Outdoor Clothes Collection",
             "description": "<p>Embrace the beauty of nature with gear that complements your adventurous spirit.<\/p>",
             "button_label": "Discover More",
             "button_link": "shopify:\/\/collections",
-            "product_first": "highland-tee-white",
+            "product_first": "women-shirt-beige-dress",
             "first_dot_position_top_x": 31,
             "first_dot_position_top_y": 16,
-            "product_second": "carhartt-coat-black",
+            "product_second": "mens-half-sleeve-t-shirt",
             "second_dot_position_top_x": 42,
             "second_dot_position_top_y": 71
           }
@@ -451,41 +452,49 @@
         "logo_hzF3zz": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_1.png"
           }
         },
         "logo_eWNMkH": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_7.png"
           }
         },
         "logo_ibT8kY": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_8.png"
           }
         },
         "logo_RjHDc9": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_2.png"
           }
         },
         "logo_6WEDjD": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_4.png"
           }
         },
         "logo_nHhjWW": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_5.png"
           }
         },
         "logo_V6R7j9": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_6.png"
           }
         },
         "logo_DgyWRW": {
           "type": "logo",
           "settings": {
+            "logo": "shopify:\/\/shop_images\/download_3.png"
           }
         }
       },
