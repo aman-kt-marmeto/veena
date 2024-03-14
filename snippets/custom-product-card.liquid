@@ -86,6 +86,7 @@
                   {% for varient in product_option.values %}
                   {% assign optionName = product_option.name | handleize %}
                     <input
+                      hidden
                     type="radio"
                     name="{{optionName}}"
                     value="{{ varient }}"
