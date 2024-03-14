@@ -81,6 +81,18 @@
         {% unless product.has_only_default_variant %}
           {% for product_option in product.options_with_values %}
             {% assign optionName = product_option.name | handleize %}
+              {% unless optionName contains 'color'or optionName contains 'color' %}
+                {% for product_option in product.options_with_values %}
+            {% assign optionName = product_option.name | handleize %}
+                   <input
+                        type="radio"
+                        name="{{product.handle}}"
+                        value="{{ varient }}"
+                        {% if product_option.selected_value contains varient %}
+                        checked
+                        {% endif %}>{{ varient  }}
+          {% endfor %}
+                {% endunless %}
             {% if optionName contains 'Color' or optionName contains 'color' %}
               {% for varient in product_option.values %}
                 {% assign varient_handleize = varient | handleize %}
@@ -102,11 +114,6 @@
                   </div>
                 </span>
               {% endfor %}
-            {% endif %}
-          {% endfor %}
-          {% for product_option in product.options_with_values %}
-            {% assign optionName = product_option.name | handleize %}
-            {% if optionName contains 'size' or optionName contains 'Size' %}
             {% endif %}
           {% endfor %}
         {% endunless %}
