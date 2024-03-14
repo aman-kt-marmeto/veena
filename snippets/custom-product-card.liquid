@@ -87,6 +87,7 @@
                 <span href="{{product.url}}" class="varient-container">
                   <div class="swatches center">
                     <label
+                      id="{{ varient|append: forloop.index }}"
                       for="{{varient_handleize}}">
                       <input
                         type="radio"
