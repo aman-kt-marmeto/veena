@@ -88,16 +88,15 @@
                   <div class="swatches center">
                     <label
                       id="{{ varient|append: forloop.index }}"
-                      for="{{varient_handleize}}">
+                      for="{{varient_handleize |append:section_id|append:product.id}}">
                       <input
                         type="radio"
                         name="{{product.handle}}"
-                        id="{{ varient }}"
+                        id="{{varient_handleize |append:section_id|append:product.id}}"
                         value="{{ varient }}"
                         {% if product_option.selected_value contains varient %}
                         checked
                         {% endif %}>
-                      {{ section_id }}
                       <div class="swatch-box" data-value="{{varient}}"></div>
                     </label>
                   </div>
