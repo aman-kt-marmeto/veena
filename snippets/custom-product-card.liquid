@@ -89,7 +89,6 @@
                     <label
                       for="{{varient_handleize}}">
                       <input
-                        hidden
                         type="radio"
                         name="{{product.handle}}"
                         id="{{varient_handleize}}"
@@ -99,6 +98,7 @@
                         {% endif %}>
                       {{ product_option.selected_value }}
                         {{ varient }}
+                      {{current_varient.options}}
                       <div class="swatch-box" data-value="{{varient}}"></div>
                     </label>
                   </div>
