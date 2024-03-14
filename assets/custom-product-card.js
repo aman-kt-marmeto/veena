@@ -11,15 +11,10 @@ class CustomProductCard extends HTMLElement {
     getVarientId() {
        this.variantData = JSON.parse(this.querySelector('script').textContent);
       console.log(this.variantData)
-        console.log(this.querySelectorAll('input[type="radio"]:checked'))
+      console.log(Array.from(this.querySelectorAll('input[type="radio"]:checked'))
         this.varients = Array.from(this.querySelectorAll('input[type="radio"]:checked'), input => input.value);
       console.log(this.varients)
         this.currentVarient = this.variantData.find(item => {
-            
-          if(item.options.join("") == this.varients[0]) {
-            console.log(item.options.join(""))
-            console.log(this.varients[0])
-          }
             return item.options.join("") == this.varients[0]
         })
         console.log(this.currentVarient)
