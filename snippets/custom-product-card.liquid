@@ -105,6 +105,7 @@
                       id="{{ varient|append: forloop.index }}"
                       for="{{varient_handleize |append:section_id|append:product.id}}">
                       <input
+                        hidden
                         type="radio"
                         name="{{optionName}}"
                         id="{{varient_handleize |append:section_id|append:product.id}}"
