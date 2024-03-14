@@ -85,7 +85,7 @@
                 {% for product_option in product.options_with_values %}
                   {% assign optionName = product_option.name | handleize %}
                     <input
-                    type="radio"
+                    type="checkbox"
                     name="{{product.handle}}"
                     value="{{ varient }}"
                     {% if product_option.selected_value contains varient %}
@@ -103,7 +103,7 @@
                       id="{{ varient|append: forloop.index }}"
                       for="{{varient_handleize |append:section_id|append:product.id}}">
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="{{product.handle}}"
                         id="{{varient_handleize |append:section_id|append:product.id}}"
                         value="{{ varient }}"
