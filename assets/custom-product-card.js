@@ -17,7 +17,7 @@ class CustomProductCard extends HTMLElement {
         this.currentVarient = this.variantData.find(item => {
             console.log(item.options.join(""))
             console.log(this.varients[0])
-            return item.options.join("") == JSON.stringify(this.varients[0])
+            return item.options.join("") == this.varients[0]
         })
         console.log(this.currentVarient)
         this.getVarient(this.currentVarient.id)
