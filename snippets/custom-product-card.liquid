@@ -82,7 +82,7 @@
           {% for product_option in product.options_with_values %}
             {% assign optionName = product_option.name | handleize %}
               {% unless optionName contains 'color'or optionName contains 'color' %}
-                {% for product_option in product.options_with_values %}
+                {% for varient in product_option.values %}
                   {% assign optionName = product_option.name | handleize %}
                     <input
                     type="checkbox"
