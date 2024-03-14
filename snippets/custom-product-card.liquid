@@ -92,10 +92,12 @@
                       <input
                         type="radio"
                         name="{{product.handle}}"
+                        id="{{ varient }}"
                         value="{{ varient }}"
                         {% if product_option.selected_value contains varient %}
                         checked
                         {% endif %}>
+                      {{ section_id }}
                       <div class="swatch-box" data-value="{{varient}}"></div>
                     </label>
                   </div>
