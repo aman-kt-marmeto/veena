@@ -508,22 +508,23 @@
     "custom_image_grid_AncyYC": {
       "type": "custom-image-grid",
       "blocks": {
-        "images_8K4gGB": {
+        "images_cRnn3W": {
           "type": "Images",
           "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Button label",
             "button_link": "",
             "button_style_secondary": false,
             "color_scheme": "scheme-33f6cf8d-44e2-4cac-83e2-8296cf1140a0",
-            "content_position": "bottom-center",
+            "content_position": "middle-center",
             "content_alignment": "center"
           }
         }
       },
       "block_order": [
-        "images_8K4gGB"
+        "images_cRnn3W"
       ],
       "settings": {
         "media_option": "media--default",
