@@ -6,7 +6,7 @@
         "slides_KBiED7": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/1.jpg",
             "banner_caption": "Women's Apparel",
             "banner_heading_left": "Elevate your wardrobe with our",
             "animated_linked_text": "limited-time",
@@ -21,7 +21,6 @@
         "slides_qbGTVt": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_1.jpg",
             "banner_caption": "Modern Elegance",
             "banner_heading_left": "Step into the World of Style with the Latest Fashion Trends Unveiled!",
             "animated_linked_text": "",
@@ -36,7 +35,6 @@
         "slides_yngwJV": {
           "type": "slides",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_2.jpg",
             "banner_caption": "Trendy Classics",
             "banner_heading_left": "Discover Signature Look: Fashion Forward and Fabulous!",
             "animated_linked_text": "",
@@ -111,7 +109,6 @@
         "images_mMkGmY": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_3.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
@@ -125,7 +122,6 @@
         "images_3z9X68": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_4.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Explore",
@@ -181,7 +177,6 @@
         "main_heading": "New Arrivals",
         "button_label": "See All Product",
         "button_link": "",
-        "banner_desktop_image": "shopify:\/\/shop_images\/download_11.jpg",
         "pre_heading": "Women's Apparel",
         "banner_heading": "exclusive Best & New Arrivals collection",
         "banner_button_label": "Explore",
@@ -263,7 +258,6 @@
         "images_tndna4": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_12.jpg",
             "pre_heading": "Men's",
             "heading": "Introducing Our Distinguished Men's Clothing Collection",
             "button_label": "Explore",
@@ -277,7 +271,6 @@
         "images_YABwxh": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_13.jpg",
             "pre_heading": "Women's",
             "heading": "Elevate Your Wardrobe With Our Women's Clothing Collection",
             "button_label": "Explore",
@@ -388,7 +381,6 @@
         "lookbook_XzJ3C7": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_14.jpg",
             "heading": "Women's Winter Clothes",
             "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
             "button_label": "Discover More",
@@ -404,7 +396,6 @@
         "lookbook_pwdAhR": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_15.jpg",
             "heading": "Our Men's Winter Clothes",
             "description": "<p>welcome to our Men's Winter Clothes Collection, where every piece is a statement in comfort and style.<\/p>",
             "button_label": "Discover More",
@@ -420,7 +411,6 @@
         "lookbook_HkYpF4": {
           "type": "lookbook",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_16.jpg",
             "heading": "Women's Outdoor Clothes Collection",
             "description": "<p>Embrace the beauty of nature with gear that complements your adventurous spirit.<\/p>",
             "button_label": "Discover More",
@@ -452,49 +442,41 @@
         "logo_hzF3zz": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_1.png"
           }
         },
         "logo_eWNMkH": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_7.png"
           }
         },
         "logo_ibT8kY": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_8.png"
           }
         },
         "logo_RjHDc9": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_2.png"
           }
         },
         "logo_6WEDjD": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_4.png"
           }
         },
         "logo_nHhjWW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_5.png"
           }
         },
         "logo_V6R7j9": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_6.png"
           }
         },
         "logo_DgyWRW": {
           "type": "logo",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/download_3.png"
           }
         }
       },
@@ -519,7 +501,6 @@
         "images_8K4gGB": {
           "type": "Images",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/download_20.jpg",
             "pre_heading": "Caption",
             "heading": "Women's Clothing Collection",
             "button_label": "Button label",
