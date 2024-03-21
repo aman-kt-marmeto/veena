@@ -3,9 +3,10 @@
 }
 
 .custom-lookbook .product-detail__image-container img {
-    width: 100%;
+    max-width: 100px;
     height: auto;
     display: block;
+    border-radius:5px;
 }
 
 .custom-lookbook__image {
