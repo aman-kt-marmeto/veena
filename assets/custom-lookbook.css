@@ -87,7 +87,8 @@
 
 
 .shop-the-look__dots__svg:hover+.product-detail {
-    visibility: visible;
+   visibility: visible;
+    line-height: normal;
     left: 3rem;
     opacity: 1;
 }
