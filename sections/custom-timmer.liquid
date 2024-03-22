@@ -19,6 +19,7 @@
   <div class="page-width">
     <div class="grid grid--1-col grid--2-col-desktop">
       <div class="grid__item custom-timer__text-wrapper">
+        <input hidden id="timer-end-date" data-end-date="{{ section.settings.end-date }}">
         {% if section.settings.heading %}
           <h2 class="h1x">{{ section.settings.heading }}</h2>
         {% endif %}
