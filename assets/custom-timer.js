@@ -7,7 +7,7 @@ function updateCountdown(endTime) {
     const minutes = remainingTime.getMinutes()
     const seconds = remainingTime.getSeconds()
   const endDAte = document.querySelector("#timer-end-date").dataset.endDate
-  console.log(endDAte)
+
 
 
     // Update the countdown elements
@@ -47,7 +47,7 @@ function padZero(number) {
 
 
 // Set the end time for the countdown (replace with your desired end time)
-const endTime = new Date('Mar 25, 2024');
+const endTime = new Date(endDAte);
 
 // Start the countdown
 updateCountdown(endTime);
