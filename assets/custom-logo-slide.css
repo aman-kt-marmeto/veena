@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 171px
+    min-width: 181px
 }
 
 .custom-logo-slide::-webkit-scrollbar {
