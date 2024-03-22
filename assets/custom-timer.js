@@ -1,3 +1,5 @@
+ let endDate = document.querySelector("#timer-end-date").dataset.endDate
+console.log(endDate)
 function updateCountdown(endTime) {
     const now = new Date();
     const timeDifference = endTime - now;
@@ -6,8 +8,7 @@ function updateCountdown(endTime) {
     const hours = remainingTime.getHours()
     const minutes = remainingTime.getMinutes()
     const seconds = remainingTime.getSeconds()
-  let endDate = document.querySelector("#timer-end-date").dataset.endDate
-console.log(endDate)
+
 
 
     // Update the countdown elements
