@@ -1,5 +1,4 @@
  let endDate = document.querySelector("#timer-end-date").dataset.endDate
-console.log(endDate)
 function updateCountdown(endTime) {
     const now = new Date();
     const timeDifference = endTime - now;
@@ -49,6 +48,5 @@ function padZero(number) {
 
 // Set the end time for the countdown (replace with your desired end time)
 const endTime = new Date(endDate);
-console.log(endTime)
 // Start the countdown
 updateCountdown(endTime);
