@@ -58,6 +58,7 @@
     z-index: 1;
     cursor: pointer;
     padding: 2px;
+   line-height: normal;
 }
 
 .product-detail__image-container {
@@ -89,7 +90,6 @@
 
 .shop-the-look__dots__svg:hover+.product-detail {
    visibility: visible;
-    line-height: normal;
     left: 3rem;
     opacity: 1;
 }
