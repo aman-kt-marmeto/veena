@@ -48,6 +48,6 @@ function padZero(number) {
 
 // Set the end time for the countdown (replace with your desired end time)
 const endTime = new Date(endDate);
-
+console.log(endTime)
 // Start the countdown
 updateCountdown(endTime);
