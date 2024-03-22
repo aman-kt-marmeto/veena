@@ -45,7 +45,7 @@ function padZero(number) {
 
 
 // Set the end time for the countdown (replace with your desired end time)
-const endTime = new Date('Feb 29, 2024');
+const endTime = new Date('Mar 25, 2024');
 
 // Start the countdown
 updateCountdown(endTime);
