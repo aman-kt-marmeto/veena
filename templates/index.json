@@ -607,15 +607,15 @@
     "custom_blog_RdUhjD": {
       "type": "custom-blog",
       "blocks": {
-        "blog_BgX4dp": {
+        "blog_wGr4Yg": {
           "type": "blog",
           "settings": {
-            "blog": "news"
+            "blog": "journal"
           }
         }
       },
       "block_order": [
-        "blog_BgX4dp"
+        "blog_wGr4Yg"
       ],
       "settings": {
         "heading": "Let You Know",
