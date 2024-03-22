@@ -303,6 +303,7 @@
     "custom_timmer_x7dtPA": {
       "type": "custom-timmer",
       "settings": {
+        "end-date": "Mar 24, 2024",
         "heading": "Our Women's Clothing Collection.",
         "description": "<p>where fashion meets flair, and every statement.<\/p>",
         "button_label": "View All",
