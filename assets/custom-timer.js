@@ -6,7 +6,7 @@ function updateCountdown(endTime) {
     const hours = remainingTime.getHours()
     const minutes = remainingTime.getMinutes()
     const seconds = remainingTime.getSeconds()
-  const endDAte = document.querySelector("#timer-end-date")
+  const endDAte = document.querySelector("#timer-end-date").dataset.endDate
   console.log(endDAte)
 
 
