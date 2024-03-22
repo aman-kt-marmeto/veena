@@ -6,6 +6,8 @@ function updateCountdown(endTime) {
     const hours = remainingTime.getHours()
     const minutes = remainingTime.getMinutes()
     const seconds = remainingTime.getSeconds()
+  const endDAte = document.querySelector("#timer-end-date")
+  console.log(endDAte)
 
 
     // Update the countdown elements
