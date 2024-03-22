@@ -5,7 +5,6 @@ class CustomSplide extends HTMLElement {
         this.options = JSON.parse(
             this.querySelector("#splideProperties").textContent
         );
-        console.log(this.options)
         this.initSlider();
     }
 
