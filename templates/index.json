@@ -12,16 +12,17 @@
     "17459501771e4c3aa9": {
       "type": "apps",
       "blocks": {
-        "got_star_rating_P9tH7M": {
-          "type": "shopify://apps/got/blocks/star_rating/ad61c7a6-3184-4b28-801f-5282df72ba94",
+        "got_color_to_explore_gVcEqb": {
+          "type": "shopify://apps/got/blocks/color-to-explore/ad61c7a6-3184-4b28-801f-5282df72ba94",
           "settings": {
+            "collection": "automated-collection",
             "product": "",
             "colour": "#ff0000"
           }
         }
       },
       "block_order": [
-        "got_star_rating_P9tH7M"
+        "got_color_to_explore_gVcEqb"
       ],
       "settings": {
         "include_margins": true

@@ -273,14 +273,6 @@
           "melting_snowflakes": true,
           "number_of_snowflakes": 15
         }
-      },
-      "9514437883919649705": {
-        "type": "shopify://apps/got/blocks/star_rating/ad61c7a6-3184-4b28-801f-5282df72ba94",
-        "disabled": false,
-        "settings": {
-          "product": "",
-          "colour": "#ff0000"
-        }
       }
     },
     "color_schemes": {
